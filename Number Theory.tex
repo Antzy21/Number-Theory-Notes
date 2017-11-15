@@ -863,7 +863,108 @@ $47-f(47)\cdot2=47-2303\cdot2=-4599\equiv 243\ (mod\ 7^3)$.
 Thus we conclude that $99$ and $243$ are the desired roots and that there are
 no others.
 
-% Lecture 16
+% Lecture 17
+
+\subsection{Prime Modulus}
+
+$f(x)\equiv 0\ (mod\ m)$ $\to$ $f(x)\equiv 0\ (mod\ p)$\quad \textit{(reduced)}
+(No general mathod exists to solve such congruences)
+
+\textbf{Question:}\\
+Given a polynomial congruence $f(x)\equiv 0\ (mod\ m)$ is there an analogue to
+the result in algebra which says that a polynomial equation of degree $n$ with
+complex coefficients has exactly $n$ roots?\\
+$\to$ for congruences the solution is more complicated.
+
+e.g. For any $m>1$, there are $f(x)$ such that $f(x)\equiv 0\ (mod\ m)$
+has no solutions.
+
+e.g.2 $x^p-x+1\equiv 0\ (mod\ m)$, where $p$ is a prime factor of $m$ has no
+solutions because $x^p-x+1\equiv 0\ (mod\ p)$ has none, by Fermat's Theorem.
+
+$f(x)=a_nx^n+a_{n-1}x^{n-1}+...+a_1x+a_0$ and we assume $p\nmid a_n$
+so that the congruence $f(x)\equiv 0\ (mod\ p)$ has degree $n$.
+
+\textbf{Theorem 2.25:}\\
+If the degree $n$ of $f(x)\equiv 0\ (mod\ p)$ is greater than or equal to $p$,
+then either every integer is a solution of $f(x)\equiv 0\ (mod\ p)$ or there is
+a polynomial $g(x)$ having integral coefficients, with leading coefficient $1$,
+such that $g(x)\equiv 0\ (mod\ p)$ is of degree less than $p$ and the solutions
+of $g(x)\equiv 0\ (mod\ p)$ are precisely those of $f(x)\equiv 0\ (mod\ p)$.
+
+\textbf{Proof:} Theorem 2.25\\
+Dividing $f(x)$ by $x^p-x$ we get a quotient $q(x)$ and a remainder $r(x)$
+such that $f(x)=(x^-x)q(x)+r(x)$. here $q(x)$ and $r(x)$ are polynomials
+with integral coefficients, and $r(x)=0$ or degree $r(x)<p$. Since every
+integer is a solutions of $x^p\equiv x\ (mod\ p)$ are the same as those of
+$r(x)\equiv 0\ (mod\ p)$ by Fermat's theorem, we see that the solutions of
+$f(x)\equiv 0\ (mod\ p)$ are the same as those of $r(x)\equiv 0\ (mod\ p)$.
+If $r(x)=0$ or if every coefficient of $r(x)$ is divisible by $p$, then every
+integer is a solution of $f(x)\equiv 0\ (mod\ p)$.
+
+On the other hand, if at least one coefficient of $r(x)$ is not divisible by
+$p$, then the congruence $r(x)\equiv 0\ (mod\ p)$ has a degree, and that degree
+is  less than $p$. The polynomial $g(x)$ in the theorem can be obtained from
+$r(x)$ by getting leading coefficient $1$, as follows. We may discard all terms
+in $r(x)$ whose coefficients are divisible by $p$, since the congruence
+properties modulo $p$ are unaltered. Then let $bx^m$ be the term of the highest
+degree in $r(x)$, with $(b,p)=1$. Choose $\overline{b}$ so that
+$b\overline{b}\equiv 1\ (mod\ p)$, and note that $(\overline{b},b)=1$ also. Then
+the congruence $\overline{b}r(x)\equiv 0\ (mod\ p)$ has the same solutions as
+$r(x)\equiv 0\ (mod\ p)$, and so has the same solutions as $f(x)\equiv 0\ (mod\ p)$.
+Define $g(x)=\overline{b}r(x)$ with its leading coefficient $b\overline{b}$
+replaced by 1, that is,
+\begin{align}
+    g(x)=\overline{b}r(x)-(b\overline{b}-1)x^m
+\end{align}
+
+\textbf{Theorem 2.26:}\\
+The congruence $f(x)\equiv 0\ (mod\ p)$ of degree $n$ has at most $n$ solutions.
+
+\textbf{Proof:} Theorem 2.26\\
+The proof is by induction on the degree of $f(x)\equiv 0\ (mod\ p)$.
+If $n=0$, the polynomial $f(x)=a_0$ with $a_0\not\equiv 0\ (mod\ p)$ and hence
+the congruence has no solutions. If $n=1$, the congruence has exactly one
+solutions by theorem 2.17.
+Assume the truth of the theorem for all congruences of degree $<n$, supppose that
+there were more than $n$ solutions of the congruence $f(x)\equiv 0\ (mod\ p)$ of
+degree $n$. Let the leading term of $f(x)$ be $a_nx^n$ and let $u_1,...,u_{n+1}$
+be solutions of the congruence with $u_1\not\equiv u_j\ (mod\ p)$ for $i\neq j$.
+We define $g(x)$ by
+\begin{align}
+    g(x)=f(x)-a_n(x-u_1)...(x-u_n)
+\end{align}
+noting the cancellation of $a_nx^n$ on the right.
+
+Note that $g(x)\equiv 0\ (mod\ p)$ has at least $n$ solutions, namely $u_1,...,u_n$.
+We cansider two cases:
+\begin{enumerate}
+    \item every coefficient. of $g(x)$ is divisible by $p$
+    \item at least one coefficient is not divisible by $p$
+\end{enumerate}
+
+For (i), every integer is a solution of $g(x)\equiv 0\ (mod\ p)$, and since
+$f(u_{n+1})\equiv 0\ (mod\ p)$ by assumption, it follows that $x=u_{n+1}$ is a
+solutions of
+\begin{align}
+    a_n(x-u_1)...(x-u_n)\equiv 0\ (mod\ p)
+\end{align}
+This contradicts theorem 1.15.
+
+For (ii), we note that $g(x)\equiv 0\ (mod\ p)$ has a degree and that degree is
+$<n$. By the induction hypothesis, this congruence has fewer than n solutions. This
+contradicts the earlier observation that this congruence has at least $n$ solutions.
+Thus the proof is complete.
+
+\textbf{Corollary 2.27:}
+If $b_nx^n+b_{n-1}x^{n-1}+...+b_0\equiv 0\ (mod\ p)$ has more than $n$ solutions,
+then all the coefficients $b_j$ are divisible by $p$.
+
+\textbf{Theorem 2.28:}\\
+If $F(x)$ is a function that maps residue classes $(mod\ p)$ to residue classes
+$(mod\ p)$, then there is a polynomial $f(x)$ with integral coefficients and
+degree at most $p-1$ such that $f(x)\equiv F(x)\ (mod\ p)$ for all residue
+classes $x\ (mod\ p)$.
 
 \textbf{Theorem 3.2:} Gauss' Lemma\\
 Let $p$ be an odd prime and $(a,p)=1$.
