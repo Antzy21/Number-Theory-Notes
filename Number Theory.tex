@@ -867,7 +867,7 @@ no others.
 
 \subsection{Prime Modulus}
 
-$f(x)\equiv 0\ (mod\ m)$ $\to$ $f(x)\equiv 0\ (mod\ p)$\quad \textit{(reduced)}
+$f(x)\equiv 0\ (mod\ m)$ $\to$ $f(x)\equiv 0\ (mod\ p)$\quad \textit{(reduced)}\\
 (No general mathod exists to solve such congruences)
 
 \textbf{Question:}\\
@@ -938,6 +938,8 @@ noting the cancellation of $a_nx^n$ on the right.
 
 Note that $g(x)\equiv 0\ (mod\ p)$ has at least $n$ solutions, namely $u_1,...,u_n$.
 We cansider two cases:
+
+\renewcommand{\theenumi}{\roman{enumi}}
 \begin{enumerate}
     \item every coefficient. of $g(x)$ is divisible by $p$
     \item at least one coefficient is not divisible by $p$
@@ -973,8 +975,54 @@ Let $p$ be an odd prime and $(a,p)=1$.
 \end{align}
 and their least positive residues
 
+% Lecture 20
 
+\textbf{Theorem 3.4:}\\
 
+\begin{align}
+    \frac{p}{q}\frac{q}{p}=(-1)^{\frac{p-1}{2}\frac{q-1}{2}}
+\end{align}
+
+Note: If $p$ and $q$ are distinct odd primes of the form $4k+3$, then one of
+the congruences $x^2\equiv p\ (mod\ q)$ or $x^2\equiv q\ (mod\ p)$
+is a solutions and the other is not.
+However, if at least one of the primes is of the for $4k+3$, then both
+congruences are soluable or both are not.
+
+\textbf{Proof:} Theorem 3.4\\
+Let $S$ be the set of pairs of of integers $(x,y)$ such that $1\leq x\leq\frac{p-1}{2}$
+and $1\leq y\leq\frac{q-1}{2}$.
+
+The set $S$ has $\frac{(p-1)(q-1)}{4}$ elements. Seperate this set into two mutually
+exclusive subsets $S_1$ and $S_2$ according $qx>py$ or $qx<py$.
+Note that there are no pairs $(x,y)\in S$ such that $qx=py$.
+
+The set $S_1$ can be described as the set of all pairs $(x,y)$ such that
+\begin{align}
+    1\leq x\leq\frac{p-1}{2},\quad 1\leq y\leq\frac{qx}{p}
+\end{align}
+The number of pairs in $S_1$ is
+\begin{align}
+    \sum^\frac{p-1}{2}_{x=1}[\frac{qx}{p}]
+\end{align}
+Similarly for $S_2$ the number of pairs in $S_2$ is
+\begin{align}
+    \sum^\frac{p-1}{2}_{y=1}[\frac{qy}{p}]
+\end{align}
+
+Thus we have:
+\begin{align}
+     &\sum^{\frac{p-1}{2}}_{j=1}[\frac{qj}{p}]+\sum^{\frac{q-1}{2}}_{j=1}[\frac{pj}{q}]\\
+    =&\frac{p-1}{2}\frac{q-1}{2}
+\end{align}
+and hence
+\begin{align}
+    \frac{p}{q}\frac{q}{p}=(-1)^{\frac{p-1}{2}\frac{q-1}{2}}
+\end{align}
+
+\textbf{Example:} Compute $(\frac{42}{61})$
+
+...
 
 
 
