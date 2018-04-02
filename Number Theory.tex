@@ -968,6 +968,88 @@ $(mod\ p)$, then there is a polynomial $f(x)$ with integral coefficients and
 degree at most $p-1$ such that $f(x)\equiv F(x)\ (mod\ p)$ for all residue
 classes $x\ (mod\ p)$.
 
+\textbf{Proof:} Theorem 2.28\\
+By Fermat's Congruence we see that
+\begin{align}
+    1-(x-a)^{p-1}&\equiv 1\ (mod\ p)\text{ if } x\equiv a\ (mod\ p)\\
+    1-(x-a)^{p-1}&\equiv 0\ (mod\ p) \text{ otherwise.}
+\end{align}
+Hence the polynomial
+\begin{align}
+    f(x)=\sum^p_{i=1}F(i)(1-(x-i)^{p-1})
+\end{align}
+had the desired properties.
+
+\textbf{Theorem 2.29:}\\
+The congruencs $f(x)\equiv 0\ (mod\ p)$ of degree $n$ with leading coefficient
+$a_n=1$ has $n$ solutions iff $f(x)$ is a factor of $x^p-x$ modulo $p$, that is
+if and only if $x^p-x=f(x)q(x)+ps(x)$, where $q(x)$ and $s(x)$ have integral
+coefficients, $q(x)$ has degree $p-n$ and leading coefficient $1$, and where
+$s(x)$ is a polynomial of degree less than $n$ or $s(x)$ is zero.
+
+\textbf{Proof:} Theorem 2.29\\
+First we assume that $f(x)\equiv 0\ (mod\ p)$ has $n$ solutions. Then $n\leq p$
+by defintion 2.4. Dividing $x^p-x$ by $f(x)$ we get $x^p-x=f(x)q(x)=r(x)$ where
+degree $r(x)<n$ or $r(x)<n$ or $r(x)=0$. This equation implies
+(using Fermat's theorem) that every solution of $f(x)\equiv 0\ (mod\ p)$ is a
+solution of $r(x)\equiv 0\ (mod\ p)$. Thus $r(x)\equiv 0\ (mod\ p)$ has at least
+$n$ solutions and by Corollary 2.27, it follows that every coefficient in $r(x)$
+is divisible by $p$, so $r(x)=ps(x)$ as in the theorem.
+
+Conversely, assume that $x^p-x=f(x)q(x)+ps(x)$ as in the theorem.
+By Fermat's theorem, the congruence $f(x)q(x)\equiv 0\ (mod\ p)$ has $p$ solutions.
+This congruence has leading term $x^p$. The leading term of $f(x)$ is $x^n$ by
+hypothesis, and hence the leading term of $q(x)$ is $x^{p-n}$. By theorem 2.26,
+the congruence $f(x)\equiv 0\ (mod\ p)$ and $q(x)\equiv 0\ (mod\ p)$ have at
+most $n$ solutions and $p-n$ solutions, respectively. But every one of the p
+solutions of $f(x)\equiv 0\ (mod\ p)$ has a solution of at least one of the
+congruences $f(x)\equiv 0\ (mod\ p)$ and $q(x)\equiv 0\ (mod\ p)$. It follows
+that the two congruences have exactly $n$ solutions and $p-n$ solutions, respectively.
+
+\textbf{Corollary 2.30:}
+If $d|(p-1)$, then $x^d\equiv 1\ (mod\ p)$ has $d$ solutions.
+
+\textbf{Proof:} Corollary 2.30\\
+Choose $e$ so that $de=p-1$. Since $(y-1)(1+y+...+y^{e-1})=y^e-1$, on taking $y=x^d$
+we see that $x(x^d-1)(1+x^d+...+x^{d(e-1)})=x^p-x$.
+
+Consider
+\begin{align*}
+    f(x)=(x-1)(x-2)...(x-p+1)
+\end{align*}
+We assume $p>2$. On expanding, we find that
+\begin{align}
+    f(x)=x^{p-1}-\sigma_{1}x^{p-2}+\sigma_{2}x^{p-3}-...+\sigma_{p-1}
+\end{align}
+
+where $\sigma_j$ is the sum of all products of $J$ distinct members of the set
+$\{1,2,..,p-1\}$. In the two extreme cases we have $\sigma_1=1+2+3+...+(p-1)=\frac{p-1}{2}$,
+and $\sigma_{p-1}=1\dot2\dot3\dot...\dot(p-1)=(p-1)!$. The polynomial f(x) has degree $p-1$
+and has the $p-1$ roots $1,2,...,p-1\ (mod\ p)$. consequently, the polynomial $xf(x)$
+has degree $p$ and has $p$ roots. By theorem 2.29 in $xf(x)$, we see that there are polynomials
+$q(x)$ and $s(x)$ such that $x^p-x=xf(x)q(x)+ps(x)$.
+Since the degree $q(x)=p-p=0$ and leading coefficient $1$, we see that $q(x)=1$.
+that is, $x^p-x=xf(x)+ps(x)$, which is to say that the coefficients of $x^p-x$ are congruent
+$mod(\ p)$to those of $xf(x)$. On comparing the coefficients of $x$, we deduce that $\sigma_{p-1}=(p-1)!\equiv -1\ (mod\ p)$,
+which provides a second proof of Wilson's congruence. On comparing the remaining coefficients,
+we deduce that $\sigma_{p}\equiv 0\ (mod\ p)$ for $1\leq j\leq p-2$. To these useful
+observations, we may add one further remark: if $p\geq 5$ then
+\begin{align*}
+    \sigma_{p-2}\equiv 0\ (mod\ p^2)
+\end{align*}
+This is Wolstenholme's congruence. To prove it, we note that $f(p)=(p-1)(p-1)...(p-p+1)=(p-1)!$
+On taking $x=p$ in (47) we have
+\begin{align*}
+    (p-1)! = p^{p-1}-\sigma_1p^{p-2}+...+\sigma_{p-3}p^2-\sigma_{p-2}p+\sigma_{p-1}
+\end{align*}
+We already know that $\sigma_{p-1}=(p-1)!$ On subtracting this amount from both sides
+and dividing through by $p$, we deduce that
+\begin{align*}
+    p^{p-2}-\sigma_{1}p^{p-3}+...+\sigma_{p-3}p-\sigma_{p-2}=0
+\end{align*}
+All terms except the last two contains visible factors of $p^2$. Thus
+$\sigma_{p-3}p\equiv \sigma_{p-2}\ (mod\ p^2)$. This gives the desired result, since $\sigma_{p-3}\equiv 0\ (mod\ p)$
+
 \textbf{Theorem 3.2:} Gauss' Lemma\\
 Let $p$ be an odd prime and $(a,p)=1$.
 \begin{align}
