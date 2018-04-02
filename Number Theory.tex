@@ -33,8 +33,7 @@ Then $S$ consists of all the positive integers
 \subsection{Divisibility}
 
 \textbf{Definition 1.1:} Divisibility\\
-An integer $b$ is divisible by and integer $a\neq0$ if there is an integer
-$x$ such that $b=ax$.\\s
+An integer $b$ is divisible by and integer $a\neq0$ if there is an integer $x$ such that $b=ax$.\\
 We write $a|b$ (a divides b)
 
 \textbf{Theorem 1.1:} Properties of divisibility
@@ -52,9 +51,7 @@ We write $a|b$ (a divides b)
 
 \textbf{Proof:} Theorem 1.1 (3)
 
-$a|b \rightarrow b=ar$ for some $r\in \mathbb{Z}$
-and $a|c \rightarrow c=as$ for some $s\in \mathbb{Z}$
-Hence $bx+cy=a(rx+sy)$ and this proves that $a|(bx+cy)$
+$a|b \rightarrow b=ar$ for some $r\in \mathbb{Z}$ and $a|c \rightarrow c=as$ for some $s\in \mathbb{Z}$. Hence $bx+cy=a(rx+sy)$ and this proves that $a|(bx+cy)$
 
 
 \textbf{Theorem 1.2:} The Division Algorithm\\
@@ -68,89 +65,52 @@ Consider the arithmetic progression:
 
 $...,b-3a,b-2a,b-a,b,b+a,b+2a,b+3a,...$
 
-In the sequence select the smallest non-negative member and denote it by
-$r$. Thus by definition $r$ satisfies the inequalities of the theorem. But
-also $r$, being in the sequence, is of the form $b-qa$, and thus q is defined
-in terms of $r$.
+In the sequence select the smallest non-negative member and denote it by $r$. Thus by definition $r$ satisfies the inequalities of the theorem. But also $r$, being in the sequence, is of the form $b-qa$, and thus q is defined in terms of $r$.
 
-To prove uniqueness we suppose there is another pair $q_1$ and $r_1$ satisfying
-the same conditions. First we prove that $r=r_1$. If not, we may presume
-that $r<r_1$ so that $=<r_1-r<a$ and then we see that $r_1-r=a(q-q_1)$ and
-so $a|(r_1-r)$, a contradiction to Theorem 1.1 (5). Hence $r=r_1$ and also
-$q=q_1$.
+To prove uniqueness we suppose there is another pair $q_1$ and $r_1$ satisfying the same conditions. First we prove that $r=r_1$. If not, we may presume that $r<r_1$ so that $=<r_1-r<a$ and then we see that $r_1-r=a(q-q_1)$ and so $a|(r_1-r)$, a contradiction to Theorem 1.1 (5). Hence $r=r_1$ and also $q=q_1$.
 
-Note: We stated the theorem with $a>0$. However this is not necessary and
-we may formulate as:
+Note: We stated the theorem with $a>0$. However this is not necessary and we may formulate as:
 
-Given $a,b\in\mathbb{Z}$ , $a\neq 0$ , there exists $q,r\in\mathbb{Z}$ such
-that $b=qa+r$ , $0\leq r < |a|$.
+Given $a,b\in\mathbb{Z}$ , $a\neq 0$ , there exists $q,r\in\mathbb{Z}$ such that $b=qa+r$ , $0\leq r < |a|$.
 
 
 \textbf{Definition 1.2:}\\
-The integer $a$ is a \underline{common divisor} of $b$ and $c$ if $a|b$,
-$a|c$
-and at least $b\neq0$ or $c\neq0$, the greatest among their common divisors
-is
-called the \underline{greatest common divisor} of $b$ and $c$ and is denoted
-by
-$gcd(b,c)$ or $(b,c)$.
+The integer $a$ is a \underline{common divisor} of $b$ and $c$ if $a|b$, $a|c$ and at least $b\neq0$ or $c\neq0$, the greatest among their common divisors is called the \underline{greatest common divisor} of $b$ and $c$ and is denoted by $gcd(b,c)$ or $(b,c)$.
 
-Let $b_1,...,b_n\in\mathbb{Z}$, not all zero.
-We denote $g=(b_1,...b_n)$ to be the greatest common divisor.
+Let $b_1,...,b_n\in\mathbb{Z}$, not all zero. We denote $g=(b_1,...b_n)$ to be the greatest common divisor.
 
 \textbf{Theorem 1.3:}\\
 If $g=(b,c)$, then there exist $x_0,y_0\in\mathbb{Z}$ such that $g=(b,c)=bx_0+cy_0$
 
-\textbf{Proof:} Theorem 1.3
+\textbf{Proof:} Theorem 1.3\\
+Consider the linear combination $bx+cy$, where $x,y$ range over all the integers. This set of integers \{$bx+cy$\} includes positive and negative values and also 0. ($x=y=0$). Choose $x_0$ and $y_0$ so that $bx_0+cy_0$ is the least positive integer $l$ in the set. Thus $l=bx_0+cy_0$.
 
-Consider the linear combination $bx+cy$, where $x,y$ range over all the integers.
-This set of integers \{$bx+cy$\} includes positive and negative values and
-also 0. ($x=y=0$). Choose $x_0$ and $y_0$ so that $bx_0+cy_0$ is the least
-positive integer $l$ in the set. Thus $l=bx_0+cy_0$.
-
-Next we prove that $l|b$ and $l|c$. Assume that $l \nmid b$ , then it follows
-that there exists integers $q$ and $r$ , by Theorem 1.2, such that $b=lq+r$
-with $0<r<l$. Hence we have $r=b-lq=b-q(bx_0+cy_0)=b(l-qx_0)+c(-qy_0)$, and
-thus $r$ is in the set \{$bx+cy$\}. This contradicts the fact that $l$ is
-the least positive integer in \{$bx+cy\}$. Similar proof for $l|c$. Now since
-$g=(b,c)$ we may write $b=gB$ , $c=gC$ and $l=bx_0+cy_0=g(Bx_0+Cy_0)$. Thus
-$g|l $ and so by Theorem 1.1 (5) we conclude that $g \leq l$. We know $g<l$
-is impossible since $g$ is the greatest common divisor, so $g=l=bx_0+cy_0$.
+Next we prove that $l|b$ and $l|c$. Assume that $l \nmid b$ , then it follows that there exists integers $q$ and $r$ , by Theorem 1.2, such that $b=lq+r$ with $0<r<l$. Hence we have $r=b-lq=b-q(bx_0+cy_0)=b(l-qx_0)+c(-qy_0)$, and thus $r$ is in the set \{$bx+cy$\}. This contradicts the fact that $l$ is the least positive integer in \{$bx+cy\}$. Similar proof for $l|c$. Now since $g=(b,c)$ we may write $b=gB$ , $c=gC$ and $l=bx_0+cy_0=g(Bx_0+Cy_0)$. Thus $g|l $ and so by Theorem 1.1 (5) we conclude that $g \leq l$. We know $g<l$ is impossible since $g$ is the greatest common divisor, so $g=l=bx_0+cy_0$.
 
 % Lecture 3
 
 \textbf{Theorem 1.4:}\\
-The greatest common denominator of $b$ and $c$ can be characterised in the
-following two ways:
+The greatest common denominator of $b$ and $c$ can be characterised in the following two ways:
 \begin{enumerate}
     \item It is the least positive value of $bx+cy$ where $x,\ y\in\mathbb{Z}$
-    \item If $d$ is any common divisor of $b$ and $c$ then $d|g$ by Theorem
-1.1 (3).
+    \item If $d$ is any common divisor of $b$ and $c$ then $d|g$ by Theorem 1.1 (3).
 \end{enumerate}
 
 \textbf{Proof:} Theorem 1.4
 
 \begin{enumerate}
 \item Follows from Theorem 1.3
-\item If $d$ is any common divisor of $b$ and $c$, then $d|g$ by Theorem
-1.1 (3). Moreover, there cannot be two distinct integers with property (2),
-because of Theorem 1.1 (4).
+\item If $d$ is any common divisor of $b$ and $c$, then $d|g$ by Theorem 1.1 (3). Moreover, there cannot be two distinct integers with property (2), because of Theorem 1.1 (4).
 \end{enumerate}
 
-Note: If $d=bx+cy$ , then $d$ is not necessary the $gcd(b,c)$. However, it
-does follow from such align that $(b,c)$ is a divisor of $d$. In particular
-, if $bx+cy=1$ for some $x,y\in\mathbb{Z}$ , then $(b,c)=1$.
+Note: If $d=bx+cy$ , then $d$ is not necessary the $gcd(b,c)$. However, it does follow from such align that $(b,c)$ is a divisor of $d$. In particular , if $bx+cy=1$ for some $x,y\in\mathbb{Z}$ , then $(b,c)=1$.
 
 \textbf{Theorem 1.5:}\\
-Given $b_1,...,b_n\in\mathbb{Z}$ not all zero with greatest common divisor
-$g$,
-there exists integers $x_1,...,x_n$,  such that
+Given $b_1,...,b_n\in\mathbb{Z}$ not all zero with greatest common divisor $g$, there exists integers $x_1,...,x_n$,  such that
 \begin{align}
     g=(b_1,...,b_n)=\sum^n_{j=1}b_jx_j
 \end{align}
-Furthermore, g is the least positive value of the linear form $\sum^n_{j=i}b_jy_j$
-where the $y_j$ runs over all integers; also $g$ is the positive common
-divisor of $b_1,...,b_n$ that is divisible by every common divisor.
+Furthermore, g is the least positive value of the linear form $\sum^n_{j=i}b_jy_j$ where the $y_j$ runs over all integers; also $g$ is the positive common divisor of $b_1,...,b_n$ that is divisible by every common divisor.
 
 \textbf{Proof:} Theorem 1.5
 
@@ -168,10 +128,7 @@ For any $m\in\mathbb{Z}, m>0$
 
 By Theorem 1.4 we have:
 
-$(ma,mb)$ = least positive value of $max+mby$
-=$m$ \{ least positive integer of $ax+by$\}
-= $m(a,b)$
-
+$(ma,mb)$ = least positive value of $max+mby$ =$m$ \{ least positive integer of $ax+by$\} = $m(a,b)$
 
 \textbf{Theorem 1.7:}\\
 If $d|a$, $d|b$ and $d>0$, then
@@ -187,9 +144,7 @@ If $(a,b)=g$, then
 
 \textbf{Proof:} Theorem 1.7
 
-The second assertion is the special case of the first using $d=(a,b)=g$.
-The first assertion is a direct consequence of Theorem 1.6, obtained by
-replacing $m,a,b$ in Theorem 1.6 by $d,\frac{a}{d},\frac{b}{d}$ respectively.
+The second assertion is the special case of the first using $d=(a,b)=g$. The first assertion is a direct consequence of Theorem 1.6, obtained by replacing $m,a,b$ in Theorem 1.6 by $d,\frac{a}{d},\frac{b}{d}$ respectively.
 
 \textbf{Theorem 1.8:}\\
 If $(a,m)=(b,m)=1$ then $(ab,m)=1$
@@ -200,10 +155,7 @@ Exercise for the reader.
 
 \textbf{Definition:} 1.3
 
-We say that $a$ and $b$ are \underline{relatively prime} in case $(a,b)=1$,
-and that $a_1,a_2,...,a_n$ are relatively prime in the case $(a_1,a_2,...,a_n)=1$.
-We say that $a_1,a_2,...,a_n$ are \underline{relatively prime in pairs} in
-case $(a_i,a_j)=1$ for all $i=1,2,...,n$ and $j=1,2,...n$ with $i \neq j$.
+We say that $a$ and $b$ are \underline{relatively prime} in case $(a,b)=1$, and that $a_1,a_2,...,a_n$ are relatively prime in the case $(a_1,a_2,...,a_n)=1$. We say that $a_1,a_2,...,a_n$ are \underline{relatively prime in pairs} in case $(a_i,a_j)=1$ for all $i=1,2,...,n$ and $j=1,2,...n$ with $i \neq j$.
 
 Note: $(a,b)=1$ we also say $a$ and $b$ are \underline{coprime}.
 
@@ -222,16 +174,12 @@ If $c|ab$ and $(b,c)=1$, then $c|a$.
 
 \textbf{Proof:} Theorem 1.10
 
-By Theorem 1.6 , $(ab,ac)=a(b,c)=a$. By hypothesis $c|ab$ and clearly $c|ac$,
-so $c|a$ by Theorem 1.4 (2).
+By Theorem 1.6 , $(ab,ac)=a(b,c)=a$. By hypothesis $c|ab$ and clearly $c|ac$, so $c|a$ by Theorem 1.4 (2).
 
-Now we observe for $c\neq 0$ , we have $(b,c)=(b,-c)$ by Theorem 1.9 and
-hence we may presume $c>0$.
+Now we observe for $c\neq 0$ , we have $(b,c)=(b,-c)$ by Theorem 1.9 and hence we may presume $c>0$.
 
 \textbf{Theorem 1.11:} The Euclidean Algorithm\\
-Given $b,c\in\mathbb{Z}, c>0$, we can make a repeated
-application of the division algorithm, \textbf{Theorem 1.2},
-to obtain a series of aligns
+Given $b,c\in\mathbb{Z}, c>0$, we can make a repeated application of the division algorithm, \textbf{Theorem 1.2}, to obtain a series of aligns
 \begin{align}
 b=cq_1+r_1          & \quad0<r_1<c\\
 c=r_1q_2+r_2        & \quad0<r_2<r_1\\
@@ -240,11 +188,7 @@ r_1=r_2q_3+r_3      & \quad0<r_3<r_2\\
 r_j=r_{j+1}q_j+r_j  & \quad0<r_j<r_{j-1}\\
 r_{j-1}=r_jq_{j+1}.
 \end{align}
-The greatest common divisor $(b,c)$ of $b$ and $c$ is $r_j$,
-the last nonzero remainder in the division process.
-Values of $x_0$ and $y_0$ in $(b,c)=bx_0+cy_0$
-can be obtained by writing each $r_i$ as a linear combination
-of $b$ and $c$.
+The greatest common divisor $(b,c)$ of $b$ and $c$ is $r_j$, the last nonzero remainder in the division process. Values of $x_0$ and $y_0$ in $(b,c)=bx_0+cy_0$ can be obtained by writing each $r_i$ as a linear combination of $b$ and $c$.
 
 \textbf{Proof:} Theorem 1.11
 
@@ -298,29 +242,18 @@ y_1&=0 , y_0=1 \\
 
 
 
-We want to compute the $gcd(841,160)$ and express as a linear combination
-of 841 and 160.
+We want to compute the $gcd(841,160)$ and express as a linear combination of 841 and 160.
 
 
 \textbf{Definition 1.4:}\\
-The integers $a_1,...,a_n$, all different from zero, have a
-\textbf{common multiple} $b$ if $a_i|b$ for $i=1,...,n$. The least of
-the positive common multiples is called the
-\textbf{least common multiple} and it is denoted by
-$[a_1,...,a_n]$ or $lcm(a1,...,a_n)$
+The integers $a_1,...,a_n$, all different from zero, have a \textbf{common multiple} $b$ if $a_i|b$ for $i=1,...,n$. The least of the positive common multiples is called the \textbf{least common multiple} and it is denoted by $[a_1,...,a_n]$ or $lcm(a1,...,a_n)$
 
 \textbf{Theorem 1.12:}\\
-If $b$ is any common multiple of $a_1,...,a_n$,
-then $[a_1,...,a_n]\ |\ b$. This is the same as saying that if $h=[a_1,...,a_n]$
-then $0,\pm h,2\pm h,...$ comprise all the common multiples of $a_1,...,a_n$.
+If $b$ is any common multiple of $a_1,...,a_n$, then $[a_1,...,a_n]\ |\ b$. This is the same as saying that if $h=[a_1,...,a_n]$ then $0,\pm h,2\pm h,...$ comprise all the common multiples of $a_1,...,a_n$.
 
 \textbf{Proof:} Theorem 1.12
 
-Let $m$ be any common multiple and divide $m$ and $h$. By Theorem 1.2 , $\exists
-q,r$ such that $m=qh+r$ , $ 0\leq r<h.$ We must probe that $r=0$. If $r\neq0$
-we argue as follows. For each $i=1,2,...,n$ we know that $a_i|h$ and $a-i|m$
-, so that $a_i|r$ . Thus $r$ is a positive common multiple of $a_1,a_2,...,a_n$
-contrary to the fact that h is the least of all positive common multiples.
+Let $m$ be any common multiple and divide $m$ and $h$. By Theorem 1.2 , $\exists q,r$ such that $m=qh+r$ , $ 0\leq r<h.$ We must probe that $r=0$. If $r\neq0$ we argue as follows. For each $i=1,2,...,n$ we know that $a_i|h$ and $a-i|m$, so that $a_i|r$ . Thus $r$ is a positive common multiple of $a_1,a_2,...,a_n$ contrary to the fact that h is the least of all positive common multiples.
 
 
 \textbf{Theorem 1.13:}\\
@@ -333,26 +266,15 @@ If $m>0$
 \textbf{Proof:} Theorem 1.13
 
 \begin{enumerate}
-\item Let $H=[ma,mb]$ and $h=[a,b]$. Then $mh$ is a multiple of $ma$ and
-$mb$, so that $mh\geq H$. Also, $H$ is a multiple of both $ma$ and $mb$ so
-$H/m$ is a multiple of $a$ and $b$. Thus, $H/m \geq h$ from which it allows
-that $mh=H$.
+\item Let $H=[ma,mb]$ and $h=[a,b]$. Then $mh$ is a multiple of $ma$ and $mb$, so that $mh\geq H$. Also, $H$ is a multiple of both $ma$ and $mb$ so $H/m$ is a multiple of $a$ and $b$. Thus, $H/m \geq h$ from which it allows that $mh=H$.
+\item It will suffice to prove this for $a,b\in\mathbb{Z}$ with $a>0,b>0$, since $[a,-b]=[a,b]$. We begin with the special case where $(a,b)=1$. Now $[a,b]=1$, is a multiple of a, say $ma$. Then $b|ma$ and $(a,b)=1$, so by Theorem 1.10 we conclude that $b|m$. Hence $b \leq m$ , $ba\leq ma$. But $ba$, being a positive common multiple of 4b4 and $a$ , cannot be less than the least common multiple, so $ba=ma=[a,b]$.
 
-\item It will suffice to prove this for $a,b\in\mathbb{Z}$ with $a>0,b>0$
-, since $[a,-b]=[a,b]$. We begin with the special case where $(a,b)=1$. Now
-$[a,b]=1$, is a multiple of a, say $ma$. Then $b|ma$ and $(a,b)=1$, so by
-Theorem 1.10 we conclude that $b|m$. Hence $b \leq m$ , $ba\leq ma$. But
-$ba$, being a positive common multiple of 4b4 and $a$ , cannot be less tahn
-the least common multiple, so $ba=ma=[a,b]$.
-
-Let $(a,b)=g>1$. we have $(a/g,b/g)=1$ by Theorem 1.7. Applying the result
-of the previous paragraph we have:
+Let $(a,b)=g>1$. we have $(a/g,b/g)=1$ by Theorem 1.7. Applying the result of the previous paragraph we have:
 \begin{align}
 [a/g,b/g]\cdot(a/g,b/g)=ab/g
 \end{align}
 
-Multiplying by $g^2$ and using Theorem 1.6 as well as the first part (1.),
-we get $[a,b]\cdot(a,b)=ab$.
+Multiplying by $g^2$ and using Theorem 1.6 as well as the first part (1.), we get $[a,b]\cdot(a,b)=ab$.
 \end{enumerate}
 
 % Up to where Chris finished proofs and Examples
@@ -360,32 +282,21 @@ we get $[a,b]\cdot(a,b)=ab$.
 \subsection{Primes}
 
 \textbf{Definition 1.5:}\\
-An integer $p>1$ is called a \textbf{prime number} if there is no divisor
-$d$ of $p$ satisfying $1<d<p$. If an integer $a>1$ is not a prime, is is
-called a \textbf{composite number}.
+An integer $p>1$ is called a \textbf{prime number} if there is no divisor $d$ of $p$ satisfying $1<d<p$. If an integer $a>1$ is not a prime, is is called a \textbf{composite number}.
 
 \textbf{Theorem 1.14:}\\
-Every integer $n>1$ can be expressed as a product of primes
-(with perhaps only one factor).
+Every integer $n>1$ can be expressed as a product of primes (with perhaps only one factor).
 
 % Lecture 5
 
 \textbf{Theorem 1.15:}\\
-If $p|ab$, p prime, then $p|a$ or $p|b$.
-More generally if $p|a_1...a_n$, then $p$ divides at least on of the factors $a_i$
-If $p\nmid a$, then $(a,p)=1$ and so by \textbf{Thm 1,10}, $p|b$.
-For the general case, we use induction.
+If $p|ab$, p prime, then $p|a$ or $p|b$. More generally if $p|a_1...a_n$, then $p$ divides at least on of the factors $a_i$ If $p\nmid a$, then $(a,p)=1$ and so by \textbf{Thm 1,10}, $p|b$. For the general case, we use induction.
 
 \textbf{Theorem 1.16:} Fundamental Theorem of Arithmatic\\
-The factoring of any integer $n>1$ into primes is unique apart from
-the order of the prime factors.
+The factoring of any integer $n>1$ into primes is unique apart from the order of the prime factors.
 
 \textbf{Definition 1.6:}\\
-We call $a$ a square (or \textbf{perfect square}) if it can be written as $a=n^2$.
-By the \textbf{F.T.A.} $a$ is a square if all the exponents $\alpha(p)$ in (1.6)
-are even. We say that $a$ is \textbf{square free} if 1 is the largest square
-dividing $a$. Thus $a$ is square free iff the exponents $\alpha(p)=0$ or $1$
-If p is prime, then the assertion $p^k||a$ is equivalent to $k=\alpha(p)$.
+We call $a$ a square (or \textbf{perfect square}) if it can be written as $a=n^2$. By the \textbf{F.T.A.} $a$ is a square if all the exponents $\alpha(p)$ in (1.6) are even. We say that $a$ is \textbf{square free} if 1 is the largest square dividing $a$. Thus $a$ is square free iff the exponents $\alpha(p)=0$ or $1$. If p is prime, then the assertion $p^k||a$ is equivalent to $k=\alpha(p)$.
 
 \textbf{Theorem 1.17:} (Euclid)\\
 The number of primes is infinite.
@@ -411,31 +322,22 @@ Let $n,m\in\mathbb{N}$ and $p$ be a prime. then
 \subsection{Congruences}
 
 \textbf{Definition 2.1:}\\
-If $m\in\mathbb{Z}$, $m\neq0$ is such that $m|a-b$, we say that $a$ is
-\underline{congruent to} $b$ modulo $m$ and we write $a\equiv b\ (mod\ m)$
+If $m\in\mathbb{Z}$, $m\neq0$ is such that $m|a-b$, we say that $a$ is \underline{congruent to} $b$ modulo $m$ and we write $a\equiv b\ (mod\ m)$
 
-Since $a-b$ is divisible by $-m$, we can socus our attention to a positive modulus.
-We will assume in this chapter that $m>0$.
+Since $a-b$ is divisible by $-m$, we can socus our attention to a positive modulus. We will assume in this chapter that $m>0$.
 
 \textbf{Theorem 2.1:} Properties of Congruences
 \begin{enumerate}
-    \item $a\equiv b\ (mod\ m)$ $b\equiv a\ (mod\ m)$,
-    and $a-b\equiv 0\ (mod\ m)$ are equivalent statements.
-    \item If $a\equiv b\ (mod\ m)$ and $b\equiv c\ (mod\ m)$,
-    then $a\equiv c\ (mod\ m)$
-    \item If $a\equiv b\ (mod\ m)$ and $c\equiv d\ (mod\ m)$,
-    then $a+c\equiv b+d\ (mod\ m)$
-    \item If $a\equiv b\ (mod\ m)$ and $c\equiv d\ (mod\ m)$,
-    then $ac\equiv bd\ (mod\ m)$
-    \item If $a\equiv b\ (mod\ m)$ and $d|m,\ d>0$,
-    then $a\equiv b\ (mod\ d)$
-    \item If $a\equiv b\ (mod\ m)$
-    then $ac\equiv bc\ (mod\ mc)$ for $c>0$
+    \item $a\equiv b\ (mod\ m)$ $b\equiv a\ (mod\ m)$, and $a-b\equiv 0\ (mod\ m)$ are equivalent statements.
+    \item If $a\equiv b\ (mod\ m)$ and $b\equiv c\ (mod\ m)$, then $a\equiv c\ (mod\ m)$
+    \item If $a\equiv b\ (mod\ m)$ and $c\equiv d\ (mod\ m)$, then $a+c\equiv b+d\ (mod\ m)$
+    \item If $a\equiv b\ (mod\ m)$ and $c\equiv d\ (mod\ m)$, then $ac\equiv bd\ (mod\ m)$
+    \item If $a\equiv b\ (mod\ m)$ and $d|m,\ d>0$, then $a\equiv b\ (mod\ d)$
+    \item If $a\equiv b\ (mod\ m)$ then $ac\equiv bc\ (mod\ mc)$ for $c>0$
 \end{enumerate}
 
 \textbf{Theorem 2.2:}\\
-Let $f$ denote a polynomial with integral coefficients. If $a\equiv b\ (mod\ m)$
-then $f(a)\equiv f(b)\ (mod\ m)$
+Let $f$ denote a polynomial with integral coefficients. If $a\equiv b\ (mod\ m)$ then $f(a)\equiv f(b)\ (mod\ m)$
 
 \textbf{Theorem 2.3:}
 \begin{enumerate}
@@ -447,36 +349,25 @@ then $f(a)\equiv f(b)\ (mod\ m)$
 % Lecture 7
 
 \textbf{Definition 2.2:}\\
-If $x\equiv y\ (mod\ m)$ then y is called a \underline{residue} of $x\ (mod\ m)$.
-A set $x_1,...,x_m$ is called a \underline{complete residue system modulo $m$} if
-for every integer $y$, there is one and only one $x_j$ such that $y=x_j\ (mod\ m)$
+If $x\equiv y\ (mod\ m)$ then y is called a \underline{residue} of $x\ (mod\ m)$. A set $x_1,...,x_m$ is called a \underline{complete residue system modulo $m$} if for every integer $y$, there is one and only one $x_j$ such that $y=x_j\ (mod\ m)$
 
 \textbf{Theorem 2.4:}\\
 If $b\equiv c\ (mod\ m)$, then $(b,m)=(c,m)$.
 
 \textbf{Definition 2.3:}\\
-A \underline{reduced residue system} modulo $m$ is a set of integers $r_i$ such
-that\\ $(r_i,m)=1,\ r_i\not\equiv r_j,\ (mod\ m)$ if $i\neq j$, and such that every
-$x$ prime to $m$ (coprime) is congruent modulo $m$ to some member $r_i$ of the set.
+A \underline{reduced residue system} modulo $m$ is a set of integers $r_i$ such that\\ $(r_i,m)=1,\ r_i\not\equiv r_j,\ (mod\ m)$ if $i\neq j$, and such that every $x$ prime to $m$ (coprime) is congruent modulo $m$ to some member $r_i$ of the set.
 \begin{itemize}
-    \item You can obtains a reduced residue system by deleting from a complete
-    residue system modulo
-    $m$ those members that are not relatively prime to $m$.
-    \item We will denote by $\Phi(m)$ to be the number of elements of a reduced
-    residue system modulo $m$.
+    \item You can obtains a reduced residue system by deleting from a complete residue system modulo $m$ those members that are not relatively prime to $m$.
+    \item We will denote by $\Phi(m)$ to be the number of elements of a reduced residue system modulo $m$.
     \item All reduced reside system modulo $m$ have the same number of elements.
-    \item $\Phi(m)$ is called the \underline{Euler's $\Phi$-function} or
-    \underline{Euler's totient-function}
+    \item $\Phi(m)$ is called the \underline{Euler's $\Phi$-function} or \underline{Euler's totient-function}
 \end{itemize}
 
 \textbf{Theorem 2.5:}\\
-The number $\Phi(m)$ is the number of positive integers less than or equal to
-$m$ are relatively prime to $m$.
+The number $\Phi(m)$ is the number of positive integers less than or equal to $m$ are relatively prime to $m$.
 
 \textbf{Theorem 2.6:}\\
-Let $(a,m)=1$. Let $r_1,...,r_n$ be a complete, or a reduced,
-residue system modulo $m$. Then $ar_1,...,ar_n$ is a complete,
-or a reduced, residue system, respectively, modulo $m$.
+Let $(a,m)=1$. Let $r_1,...,r_n$ be a complete, or a reduced, residue system modulo $m$. Then $ar_1,...,ar_n$ is a complete, or a reduced, residue system, respectively, modulo $m$.
 
 % Lecture 8
 
@@ -492,20 +383,16 @@ If $(a,m)=1$, then
 \end{align}
 
 \textbf{Theorem 2.9:}\\
-If $(a,m)=1$ then there is an $x$ such that $ax\equiv 1\ (mod\ m)$.
-Any two such $x$ are congruent $(mod\ m)$.
-If $(a,m)>1$ then there is no such $x$.
+If $(a,m)=1$ then there is an $x$ such that $ax\equiv 1\ (mod\ m)$. Any two such $x$ are congruent $(mod\ m)$. If $(a,m)>1$ then there is no such $x$.
 
 \textbf{Lemma 2.10:}\\
-Let p be a prime number.
-Then $x^2\equiv 1\ (mod\ p)$ iff $x\equiv\pm 1\ (mod\ p)$.
+Let p be a prime number. Then $x^2\equiv 1\ (mod\ p)$ iff $x\equiv\pm 1\ (mod\ p)$.
 
 \textbf{Theorem 2.11:} Wilson's Theorem\\
 If $p$ is prime, then $(p-1)!\equiv -1\ (mod\ p)$
 
 \textbf{Theorem 2.12:}\\
-Let $p$ denote a prime. Then $x^2\equiv -1\ (mod\ p)$ has solutions iff
-$p=2$ or $p\equiv 1\ (mod\ 4)$.
+Let $p$ denote a prime. Then $x^2\equiv -1\ (mod\ p)$ has solutions iff $p=2$ or $p\equiv 1\ (mod\ 4)$.
 
 % Lecture 9
 
@@ -518,8 +405,7 @@ $a$ and $b$ such that $a^2+b^2=p$.
 % Lecture 10
 
 \textbf{Lemma 2.14:}\\
-Let $q$ be a prime factor of $a^2+b^2$.
-If $q\equiv 3\ (mod\ 4)$ then $q|a$ and $q|b$.
+Let $q$ be a prime factor of $a^2+b^2$. If $q\equiv 3\ (mod\ 4)$ then $q|a$ and $q|b$.
 
 
 \textbf{Theorem 2.15:} (Fermat)\\
@@ -527,8 +413,7 @@ Let
 \begin{align}
     n =  2^\alpha\prod_{p\equiv 1(4)}p^\beta\prod_{q\equiv 3(4)}q^\gamma
 \end{align}
-Then $n$ can be expressed as a sum of two squares iff all the exponents of
-$\gamma$ are even.
+Then $n$ can be expressed as a sum of two squares iff all the exponents of $\gamma$ are even.
 
 \subsection{Solutions of Congruences}
 \begin{itemize}
@@ -536,64 +421,45 @@ $\gamma$ are even.
     \begin{align}
         f(x)=a_nx^n+...+a_0
     \end{align}
-    \item if $u\in\mathbb{Z}$ such that $f(u)\equiv0\ (mod\ m)$ then we say
-    that $u$ is a\\ \underline{solution of the congruence} $f(x)\equiv0\ (mod\ m)$
-    \item If $u$ is a solution of $f(x)\equiv0\ (mod\ m)$ and if
-    $v\equiv u\ (mod\ m)$, then theorem 2.2 shows that $v$ is also a solution.
+    \item if $u\in\mathbb{Z}$ such that $f(u)\equiv0\ (mod\ m)$ then we say that $u$ is a\\ \underline{solution of the congruence} $f(x)\equiv0\ (mod\ m)$
+    \item If $u$ is a solution of $f(x)\equiv0\ (mod\ m)$ and if $v\equiv u\ (mod\ m)$, then theorem 2.2 shows that $v$ is also a solution.
     \begin{itemize}
-        \item $x\equiv u\ (mod\ m)$ is a solution of $f(x)\equiv0\ (mod\ m)$
-        meaning that every integer congruent to $u$ modulo $m$ satisfied
-        $f(x)\equiv0\ (mod\ m)$.
+        \item $x\equiv u\ (mod\ m)$ is a solution of $f(x)\equiv0\ (mod\ m)$ meaning that every integer congruent to $u$ modulo $m$ satisfied $f(x)\equiv0\ (mod\ m)$.
     \end{itemize}
 \end{itemize}
 
 \textbf{Definition 2.4:}\\
 Let $r_1,...,r_m$ denote a complete residue system modulo $m$.\\
-The \underline{number of solutions} of $f(x)\equiv0\ (mod\ m)$ is the number of
-the $r_i$ such that $f(r_i)\equiv0\ (mod\ m)$
+The \underline{number of solutions} of $f(x)\equiv0\ (mod\ m)$ is the number of the $r_i$ such that $f(r_i)\equiv0\ (mod\ m)$
 
 % Lecture 11
 
 \textbf{Definition 2.5:}\\
-Let $f(x)=a_nx^n+...+a_0$. If $a_n\equiv0\ (mod\ m)$ the
-\underline{degree of the congruence} $f(x)\equiv0\ (mod\ m)$ is $n$.
-If $a_n\equiv0\ (mod\ m)$, let $j$ be the largest integer such that
-$a_j\not\equiv0\ (mod\ m)$; then the degree of the congruence is $j$.
-If there is no such integer $j$, then no degree is assigned to the congruence.
+Let $f(x)=a_nx^n+...+a_0$. If $a_n\equiv0\ (mod\ m)$ the \underline{degree of the congruence} $f(x)\equiv0\ (mod\ m)$ is $n$. If $a_n\equiv0\ (mod\ m)$, let $j$ be the largest integer such that $a_j\not\equiv0\ (mod\ m)$; then the degree of the congruence is $j$. If there is no such integer $j$, then no degree is assigned to the congruence.
 
 \textbf{Theorem 2.16:}\\
-If $d|m$, $d>0$, and if $u$ is a solution of $f(x)\equiv0\ (mod\ m)$, then $u$
-is a solution of $f(x)\equiv0\ (mod\ d)$
+If $d|m$, $d>0$, and if $u$ is a solution of $f(x)\equiv0\ (mod\ m)$, then $u$ is a solution of $f(x)\equiv0\ (mod\ d)$
 \begin{itemize}
-    \item We say that $f(x)\equiv0\ (mod\ m)$ is an
-    \underline{identical congruence} if it holds for all integers $x$
+    \item We say that $f(x)\equiv0\ (mod\ m)$ is an \underline{identical congruence} if it holds for all integers $x$
     \begin{itemize}
-        \item If $f(x)$ is a polynomial whose coefficients are divisible by $m$,
-        then $f(x)\equiv0\ (mod\ m)$ is an identical congruence
+        \item If $f(x)$ is a polynomial whose coefficients are divisible by $m$, then $f(x)\equiv0\ (mod\ m)$ is an identical congruence
         \item e.g. $x^p\equiv x\ (mod\ p)$ is true for all integers $x$ by theorem 2.5
     \end{itemize}
 \end{itemize}
 
 \textbf{Theorem 2.17:} Linear Congruences\\
-Let $a,b$ and $m>0$ be given integers, and put $g=(a,m)$.
-The congruence $ax\equiv b\ (mod\ m)$ has a solution iff $g|b$.
-If this condition is met, then the solution forms an arithmetic progression
-with common difference $\frac{m}{g}$, giving $g$ solutions $(mod\ m)$.
+Let $a,b$ and $m>0$ be given integers, and put $g=(a,m)$. The congruence $ax\equiv b\ (mod\ m)$ has a solution iff $g|b$. If this condition is met, then the solution forms an arithmetic progression with common difference $\frac{m}{g}$, giving $g$ solutions $(mod\ m)$.
 
 \textbf{How to solve general linear congruences:}
-Let $a,b\in\mathbb{Z}$ and let $n\in\mathbb{N}$.
-Suppose we wish to solve the linear congruence
+Let $a,b\in\mathbb{Z}$ and let $n\in\mathbb{N}$. Suppose we wish to solve the linear congruence
 \begin{align}
     ax\equiv b\ (mod\ n)
 \end{align}
-Firstly apply the Extended Euclidean Algorithm to compute $d=gcd(a,n)$ and find
-$x',y'\in\mathbb{Z}$ such that
+Firstly apply the Extended Euclidean Algorithm to compute $d=gcd(a,n)$ and find $x',y'\in\mathbb{Z}$ such that
 \begin{align}
     ax'+ny'=d
 \end{align}
-If $d\nmid b$ then there are no solutions by theorem 2.17. Otherwise, there
-are exactly $d$ solutions modulo $n$ by theorem 2.17, which we can find as follows.
-
+If $d\nmid b$ then there are no solutions by theorem 2.17. Otherwise, there are exactly $d$ solutions modulo $n$ by theorem 2.17, which we can find as follows\\
 Write
 \begin{align}
     a=da',\quad b=db',\quad n=dn'
@@ -602,10 +468,7 @@ Dividing (18) by $d$ gives
 \begin{align}
     a'x'+n'y'=1
 \end{align}
-Thus reducing mod $n'$ gives $a'x'\equiv1\ (mod\ n')$ and multiplying by $b'$
-gives $a'(b'x')\equiv b'\ (mod\ n')$. Therefore $t:=b'x'$ is the unique solution
-to $a'x\equiv b'\ (mod\ n')$. Now by theorem 2.17 the solutions to (17) are
-$t,t+n',...,t+(d-1)n'$
+Thus reducing mod $n'$ gives $a'x'\equiv1\ (mod\ n')$ and multiplying by $b'$ gives $a'(b'x')\equiv b'\ (mod\ n')$. Therefore $t:=b'x'$ is the unique solution to $a'x\equiv b'\ (mod\ n')$. Now by theorem 2.17 the solutions to (17) are $t,t+n',...,t+(d-1)n'$
 
 % Lecture 12
 
@@ -623,18 +486,14 @@ Find x (is there are any) that satisfies
 \end{align}
 
 \textbf{Theorem 2.18:} The Chinese Remainder Theorem\\
-Let $m_1,...,m_r$ denote $r$ positive integers that are relatively prime in pairs,
-and let $a_1,...,a_r\in\mathbb{Z}$. Then the congruences (21) have have common
-solutions. If $x_0$ is one such solution, then an integer $x$ satisfies the
-congruences (21) iff $x=x_0+km$ for some integer $k$. Here $m-m_1m_2...m_r$
+Let $m_1,...,m_r$ denote $r$ positive integers that are relatively prime in pairs, and let $a_1,...,a_r\in\mathbb{Z}$. Then the congruences (21) have have common solutions. If $x_0$ is one such solution, then an integer $x$ satisfies the congruences (21) iff $x=x_0+km$ for some integer $k$. Here $m-m_1m_2...m_r$
 
 % Lecture 13
 
 \begin{itemize}
     \item $m_1,...,m_r$ positive integers relatively prime in pairs
     \item $m=m_1m_2...m_r$
-    \item Instead of considering just one set of aligns (21), we will consider
-    all possible systems of this type
+    \item Instead of considering just one set of aligns (21), we will consider all possible systems of this type
     \item Let
     \begin{align}
         \begin{split}
@@ -645,22 +504,15 @@ congruences (21) iff $x=x_0+km$ for some integer $k$. Here $m-m_1m_2...m_r$
         \end{split}
     \end{align}
     \item The number of such $r$-tuples $(a_1,...,a_r)$ is $m=m_1m_2...m_r$.
-    \item By the \textbf{C.R.T.} each $r$-tuple determines precisely one
-    residue class $x$ modulo $m$.
+    \item By the \textbf{C.R.T.} each $r$-tuple determines precisely one residue class $x$ modulo $m$.
     \begin{itemize}
-        \item Moreover, distinct $r$-tuples determine different residue classes.
-        To see this, suppose that $(a_1,...,a_r)\neq(a_1',...,a_r')$. then
-        $a_i\neq a_i'$ for some $i$, and we see that no integer $x$ satisfies both
-        the congruences $x\equiv a_i\ (mod\ m_i)$ and $x\equiv a_i'\ (mod\ m_i)$
+        \item Moreover, distinct $r$-tuples determine different residue classes. To see this, suppose that $(a_1,...,a_r)\neq(a_1',...,a_r')$. then $a_i\neq a_i'$ for some $i$, and we see that no integer $x$ satisfies both the congruences $x\equiv a_i\ (mod\ m_i)$ and $x\equiv a_i'\ (mod\ m_i)$
     \end{itemize}
-    \item This we have a one-to-one correspondence between the $r$-tuples
-    $(a_1,...,a_r)$ and a complete residue system modulo $m$,
-    such as the integers $1,...,m$
+    \item This we have a one-to-one correspondence between the $r$-tuples $(a_1,...,a_r)$ and a complete residue system modulo $m$, such as the integers $1,...,m$
 \end{itemize}
 
 \textbf{Theorem 2.19:}\\
-If $m_1,\ m_2>0,\ (m_1,m_2)=1$, then $\phi(m_1,m_2)=\phi(m_1)\phi(m_2)$
-moreover, if $m=\Pi p^\alpha$ then
+If $m_1,\ m_2>0,\ (m_1,m_2)=1$, then $\phi(m_1,m_2)=\phi(m_1)\phi(m_2)$ moreover, if $m=\Pi p^\alpha$ then
 \begin{align}
     \phi(m)=\prod_{p|m}(p^\alpha-p^{\alpha-1})=m\prod{p|m}(1-\frac{1}{p})
 \end{align}
@@ -668,17 +520,12 @@ moreover, if $m=\Pi p^\alpha$ then
 % Lecture 14
 
 \textbf{Theorem 2.20:}\\
-Let $f(x)$ be a fixed polynomial with integral coefficients, and for any positive
-integer $m$ let $N(m)$ denote the number of solutions of the congruence
-$f(x)\equiv0\ (mod\ m)$. If $m=m_1m_2$ where $(m_1,m_2)=1$, then
-$N(m)=N(m_1)N(m_2)$. If $m=\prod p^\alpha$, then $N(m)=\prod N(p^alpha)$
+Let $f(x)$ be a fixed polynomial with integral coefficients, and for any positive integer $m$ let $N(m)$ denote the number of solutions of the congruence $f(x)\equiv0\ (mod\ m)$. If $m=m_1m_2$ where $(m_1,m_2)=1$, then $N(m)=N(m_1)N(m_2)$. If $m=\prod p^\alpha$, then $N(m)=\prod N(p^alpha)$
 
 \subsection{Public-key Cryptography}
 
 \textbf{Lemma 2.22:}\\
-Suppose $m\in\mathbb{Z},\ m>0,\ (a,m)=1$. If $k,\overline{k}\mathbb{Z}$ and
-$k,\overline{k}>0$ such that $k,\overline{k}\equiv1\ (mod\ \phi(m))$, then
-$a^{k\overline{k}}\equiv a\ (mod\ m)$.
+Suppose $m\in\mathbb{Z},\ m>0,\ (a,m)=1$. If $k,\overline{k}\mathbb{Z}$ and $k,\overline{k}>0$ such that $k,\overline{k}\equiv1\ (mod\ \phi(m))$, then $a^{k\overline{k}}\equiv a\ (mod\ m)$.
 
 \textbf{Proof:} Theorem 2.22\\
 Write $k\overline{k}=1+r\phi(m)$ for some $r\in\mathbb{Z}$. Then by Euler's congruence
@@ -687,183 +534,99 @@ Write $k\overline{k}=1+r\phi(m)$ for some $r\in\mathbb{Z}$. Then by Euler's cong
 \end{align*}
 
 \begin{itemize}
-    \item If $(a,m)=1,\ k>0$, then $(a^k,m)=1$. Thus if $n=\phi(m)$ and
-    $r_1,...,r_n$ is a system of reduced residues $(mod\ m)$, then the
-    numbers $r_1^k,...,r_n^k$ are also relatively prime to $m$. These $k^\text{th}$
-    powers may not all be distinct $(mod\ m)$, as we see by considering the case
-    $k=\phi(m)$. On the other hand, from lemma 2.22, we can deduce that
-    these $k^\text{th}$ powers are distinct $(mod\ m)$ provided that $(k,\phi(m))=1$.
-    \item Suppose that $r_i^k\equiv r_j^k\ (mod\ m)$ and $(k,\phi(m))=1$.
-    By theorem 2.9 we may find $\overline{k}>0$ such that
-    $k\overline{k}\equiv 1\ (mod\ \phi{m})$ and then it follows from the lemma that
+    \item If $(a,m)=1,\ k>0$, then $(a^k,m)=1$. Thus if $n=\phi(m)$ and $r_1,...,r_n$ is a system of reduced residues $(mod\ m)$, then the numbers $r_1^k,...,r_n^k$ are also relatively prime to $m$. These $k^\text{th}$ powers may not all be distinct $(mod\ m)$, as we see by considering the case $k=\phi(m)$. On the other hand, from lemma 2.22, we can deduce that these $k^\text{th}$ powers are distinct $(mod\ m)$ provided that $(k,\phi(m))=1$.
+    \item Suppose that $r_i^k\equiv r_j^k\ (mod\ m)$ and $(k,\phi(m))=1$. By theorem 2.9 we may find $\overline{k}>0$ such that $k\overline{k}\equiv 1\ (mod\ \phi{m})$ and then it follows from the lemma that
     \begin{align}
         r_i\equiv r_i^{k\overline{k}}=(r_i^k)^{\overline{k}}\equiv (r_j^k)^{\overline{k}}= r_j^{k\overline{k}}\equiv r_j\ (mod\ m)
     \end{align}
-    This implies that $i=j$. We will show later that the converse also holds:
-    the numbers $r_i^k,...,r_n^k$ are distinct $(mod\ m)$ only if $(k,\phi(m))=1$.
-    Suppose that $(k,\phi(m))=1$. Since the numbers $r_1,...,r_n^k$ are distinct
-    $(mod\ m)$, they form a system of reduced residues $(mod\ m)$. That is the map
-    $a\mapsto a^k$ permutates the reduced residues $(mos\ m)$ if $(k,\phi(m))=1$.
-    The significance of the lemma is that the further map $b\mapsto b^{\overline{k}}$
-    is the inverse permutation.
-    \item To apply these observations to cryptography, we take two distinct large
-    primes, $p_1, p_2$, say each one with about 100 digits.
+    This implies that $i=j$. We will show later that the converse also holds: the numbers $r_i^k,...,r_n^k$ are distinct $(mod\ m)$ only if $(k,\phi(m))=1$. Suppose that $(k,\phi(m))=1$. Since the numbers $r_1,...,r_n^k$ are distinct $(mod\ m)$, they form a system of reduced residues $(mod\ m)$. That is the map $a\mapsto a^k$ permutates the reduced residues $(mos\ m)$ if $(k,\phi(m))=1$. The significance of the lemma is that the further map $b\mapsto b^{\overline{k}}$ is the inverse permutation.
+    \item To apply these observations to cryptography, we take two distinct large primes, $p_1, p_2$, say each one with about 100 digits.
     \begin{itemize}
         \item So $m=p_1p_2$ has about 200 digits.
-        \item Since we know the prime factorisation of m, from theorem 2.19
-        we have that $\phi(m)=(p_1-1)(p_2-1)$
+        \item Since we know the prime factorisation of m, from theorem 2.19 we have that $\phi(m)=(p_1-1)(p_2-1)$
         \item So $\phi(m)<m$
-        \item we choose now a big number $k$, $0<k,\phi(m)$ and check by the
-        Euclidean algorithm that $(k,\phi(m))=1$. We try until we get such a $k$.
-        \item We make the numbers $m$ and $k$ publicly available, by keep $p_1,p_2$
-        and $\phi(m)$ secret.
-        \item suppose now thatt some associate of ours wants to send us a message,
-        say \textit{'Gauss was a genuis!'}. The associate first converts the
-        characters to number in some standard way, say by emplying (ASCII).
-        Then $G=071$, $a=097$,..., $!=033$.
-        Then concatenate these codes to form a number
+        \item we choose now a big number $k$, $0<k,\phi(m)$ and check by the Euclidean algorithm that $(k,\phi(m))=1$. We try until we get such a $k$.
+        \item We make the numbers $m$ and $k$ publicly available, by keep $p_1,p_2$ and $\phi(m)$ secret.
+        \item suppose now thatt some associate of ours wants to send us a message, say \textit{'Gauss was a genuis!'}. The associate first converts the characters to number in some standard way, say by emplying (ASCII). Then $G=071$, $a=097$,..., $!=033$. Then concatenate these codes to form a number
         \begin{align*}
             a=071097117115115126119097115126097126103101110105117115033
         \end{align*}
         \item if the message were longer, it could be ficided into a number of blocks.
-        \item the associate could send the number $a$ and we could reconstruct the
-        message. But suppose that message has some sensitive information. In that
-        case the associate would use the number $k$ and $m$ that we have provided.
-        \item Our associate quickly finds the unique number $b$, $0\leq b<m$
-        such that $b\equiv a^k\ (mod\ m)$ and sends this $b$ to us.
+        \item the associate could send the number $a$ and we could reconstruct the message. But suppose that message has some sensitive information. In that case the associate would use the number $k$ and $m$ that we have provided.
+        \item Our associate quickly finds the unique number $b$, $0\leq b<m$ such that $b\equiv a^k\ (mod\ m)$ and sends this $b$ to us.
         \item We use Euclidean Algorithm to find $\overline{k}>0$ such that\\
-        $k\overline{k}\equiv 1\ (mod\ \phi(m))$ and then we find the unique $c$
-        such that $0\leq c<m$, $c\equiv b^{\overline{k}}\ (mod\ m)$.
-        From lemma 2.22 we deduce that $a=c$.
+        $k\overline{k}\equiv 1\ (mod\ \phi(m))$ and then we find the unique $c$ such that $0\leq c<m$, $c\equiv b^{\overline{k}}\ (mod\ m)$. From lemma 2.22 we deduce that $a=c$.
     \end{itemize}
-    \item In theory it might happen that $(a,m)>1$ in which case the lemma does
-    not apply, but the chances of this is $\approx\frac{1}{p_i}\approx 10^{-100}$.
-    Suppose that some third party gain access to the numbers $m$, $k$ and $b$,
-    and seeks to recover the number a. In principle, all that needs to be done
-    is to factor $m$, which yields $\phi(m)$, and hence $\overline{k}$.
-    The problem of locating the factors of $m$ for a big number is not easy.
+    \item In theory it might happen that $(a,m)>1$ in which case the lemma does not apply, but the chances of this is $\approx\frac{1}{p_i}\approx 10^{-100}$. Suppose that some third party gain access to the numbers $m$, $k$ and $b$, and seeks to recover the number a. In principle, all that needs to be done is to factor $m$, which yields $\phi(m)$, and hence $\overline{k}$. The problem of locating the factors of $m$ for a big number is not easy.
 \end{itemize}
 
 % Lecture 15
 
 \subsection{Prime Power Moduli}
 
-Let $f(x)$ be a polynomial with integer coefficients. Let $N(m)$ denote the
-number of solutions of $f(x)\equiv 0\ (mod\ m)$. Suppose that $m=m_1m_2$, where
-$(m_1,m_2)=$. With a "little work", theorem 2.19 shows that the roots of the
-congruence $f(x)\equiv 0\ (mod\ m)$ are in one-to-one correspondence with pairs
-$(a_1,a_2)$ in whic $a_1$ runs over all roots of the congruences
-$f(x)\equiv 0\ (mod\ m_1and in)$ $a_2$ runs over all roots of the congruence
-$f(x)\equiv 0\ (mod\ m_2)$.
+Let $f(x)$ be a polynomial with integer coefficients. Let $N(m)$ denote the number of solutions of $f(x)\equiv 0\ (mod\ m)$. Suppose that $m=m_1m_2$, where $(m_1,m_2)=$. With a "little work", theorem 2.19 shows that the roots of the congruence $f(x)\equiv 0\ (mod\ m)$ are in one-to-one correspondence with pairs $(a_1,a_2)$ in whic $a_1$ runs over all roots of the congruences $f(x)\equiv 0\ (mod\ m_1and in)$ $a_2$ runs over all roots of the congruence $f(x)\equiv 0\ (mod\ m_2)$.
 
 \begin{itemize}
-    \item From theorem 2.16 and theorem 2.20 we have that the congruence
-    $f(x)\equiv 0\ (mod\ m)$ has solutions iff it has solutions $(mod\ p^\alpha)$
-    for each prime power $p^\alpha$ exactly dividing $m$.
+    \item From theorem 2.16 and theorem 2.20 we have that the congruence $f(x)\equiv 0\ (mod\ m)$ has solutions iff it has solutions $(mod\ p^\alpha)$ for each prime power $p^\alpha$ exactly dividing $m$.
 \end{itemize}
 
 \textbf{Example:}
-Let $f(x)=x^2+x+7$. Find all roots of $f(x)\equiv 0\ (mod\ 189)$, given that
-$189=3^3\cdot7$, that all roots $(mod\ 27)$ are $4$, $13$, and $22$, and that
-the roots $(mod\ 7)$ are $0$ and $6$.
-
+Let $f(x)=x^2+x+7$. Find all roots of $f(x)\equiv 0\ (mod\ 189)$, given that $189=3^3\cdot7$, that all roots $(mod\ 27)$ are $4$, $13$, and $22$, and that the roots $(mod\ 7)$ are $0$ and $6$.
 \textbf{Solution:}
-By the Eucliean algorithm and (2.2), we find that $x\equiv a_1\ (mod\ 27)$ and that
-$x\equiv a_2\ (mod\ 7)$ iff $x\equiv 28a_1-27a_2\ (mod\ 189)$. We let $a_1=4, 13, 22$
-and $a_2=0, 6$. Thus we obtain the six solutions $13, 49, 76, 112, 139, 175\ (mod\ 189)$
+By the Eucliean algorithm and (2.2), we find that $x\equiv a_1\ (mod\ 27)$ and that $x\equiv a_2\ (mod\ 7)$ iff $x\equiv 28a_1-27a_2\ (mod\ 189)$. We let $a_1=4, 13, 22$ and $a_2=0, 6$. Thus we obtain the six solutions $13, 49, 76, 112, 139, 175\ (mod\ 189)$
 \begin{itemize}
-    \item The problem of solving a congruence is now reduced to the case of a
-    prime-power modulus.
+    \item The problem of solving a congruence is now reduced to the case of a prime-power modulus.
     \begin{itemize}
-        \item To solve $f(x)\equiv 0\ (mod\ p^k)$ we start with a solutions modulo
-        $p$ and then move to $p^2, p^3,...,p^k$.
+        \item To solve $f(x)\equiv 0\ (mod\ p^k)$ we start with a solutions modulo $p$ and then move to $p^2, p^3,...,p^k$.
     \end{itemize}
-    Suppose that $x=a$ is a solution of $f(x)\equiv 0\ (mod\ p^j)$ and we want
-    to use it to get a solution modulo $p^{j+1}$.
-    The idea is to try to get a solution $x=a+tp^j$, where t is to be determined,
-    by use of Taylor's expansion
+    Suppose that $x=a$ is a solution of $f(x)\equiv 0\ (mod\ p^j)$ and we want to use it to get a solution modulo $p^{j+1}$. The idea is to try to get a solution $x=a+tp^j$, where t is to be determined, by use of Taylor's expansion
     \begin{align}
         f(a+tp^j)=f(a)+tp^jf'(a)+t^2p^{2j}\frac{f''(a)}{2!}+...+t^np^{nj}\frac{f^{(n)}(a)}{n!}
     \end{align}
-    where $n=$ degree of $f(x)$. All derivatives beyond the $n^\text{th}$ are
-    identicallly zero. Now with respect to the modulus $p^{j+1}$, equation (37) gives
+    where $n=$ degree of $f(x)$. All derivatives beyond the $n^\text{th}$ are identicallly zero. Now with respect to the modulus $p^{j+1}$, equation (37) gives
     \begin{align*}
         f(a+tp^j)\equiv f(a)+tp^jf'(a)\ (mod\ p^{j+1})
     \end{align*}
-    as the following argument shows. What we want to establish is that the
-    coefficients of $t^1, t^3,..., t^n$ in (37) are divisible by $p^{j+1}$
-    and so can be ommited in (38). This is almost obvious because the powers
-    of $p$ in those terms. The explanation is that $\frac{f^{(k)}(a)}{k!}$
-    is an integer for each value of $k$, $2\leq k\leq n$. To see this, let
-    $cx^r$ be a representative term from $f(x)$. The corresponding term in
-    $f^{(k)}(a)$ is $cr(r-1)(r-2)...(r-k+1)a^{r-k}$.
+    as the following argument shows. What we want to establish is that the coefficients of $t^1, t^3,..., t^n$ in (37) are divisible by $p^{j+1}$ and so can be ommited in (38). This is almost obvious because the powers of $p$ in those terms. The explanation is that $\frac{f^{(k)}(a)}{k!}$ is an integer for each value of $k$, $2\leq k\leq n$. To see this, let  $cx^r$ be a representative term from $f(x)$. The corresponding term in $f^{(k)}(a)$ is $cr(r-1)(r-2)...(r-k+1)a^{r-k}$.
 
     % Lecture 16
 
-    We now use the fact (without proof), that the product of $k$ consecutive
-    integers is divisible by $k!$, and the argument is complete.
-    Thus, we have proved that the coefficients of $t^2, t^3,..., t^n$ in (37)
-    are divisible by $p^{j+1}$. The congruence (38) reveals how $t$ should be
-    chosen if $x=a+tp^j$ is to be a solution of $f(x)\equiv 0\ (mod\ p^{j+1})$.
-    We want $t$ to be a solution of
+    We now use the fact (without proof), that the product of $k$ consecutive integers is divisible by $k!$, and the argument is complete. Thus, we have proved that the coefficients of $t^2, t^3,..., t^n$ in (37) are divisible by $p^{j+1}$. The congruence (38) reveals how $t$ should be chosen if $x=a+tp^j$ is to be a solution of $f(x)\equiv 0\ (mod\ p^{j+1})$. We want $t$ to be a solution of
     \begin{align}
         f(a)+tp^jf'(a)\equiv 0\ (mod\ p^{j+1})
     \end{align}
-    Since $f(x)\equiv 0\ (mod\ p^j)$ have the solutions $x=a$, we see that $p^j$
-    can be removed as a factor to given
+    Since $f(x)\equiv 0\ (mod\ p^j)$ have the solutions $x=a$, we see that $p^j$ can be removed as a factor to given
     \begin{align}
         tf'(a)\equiv -\frac{f(a)}{p^j}\ (mod\ p)
     \end{align}
-    Which is a linear congruence in $t$. This congruence may have no solution,
-    one solutions, or $p$ solutions. If $f'(a)\equiv 0\ (mod\ p)$, then this
-    congruence has exactly one solution, and we obtain
+    Which is a linear congruence in $t$. This congruence may have no solution, one solutions, or $p$ solutions. If $f'(a)\equiv 0\ (mod\ p)$, then this congruence has exactly one solution, and we obtain
 \end{itemize}
 
 \textbf{Theorem 2.3:} Hansel's Lemma:\\
-Suppose that $f(x)$ is a polynomial with integral coefficients.
-If $f(a)\equiv0\ (mod\ p^j)$ and $f'(a)\not\equiv0\ (mod\ p)$ then there is
-a unique $t\ (mod\ p)$ such that $f(a+tp^j)\equiv0\ (mod\ p^{j+1})$
+Suppose that $f(x)$ is a polynomial with integral coefficients. If $f(a)\equiv0\ (mod\ p^j)$ and $f'(a)\not\equiv0\ (mod\ p)$ then there is a unique $t\ (mod\ p)$ such that $f(a+tp^j)\equiv0\ (mod\ p^{j+1})$
 
 \begin{itemize}
-    \item If $f(a)\equiv0\ (mod\ p^j)$, $f(b)\equiv 0\ (mod\ p^k)$, $j<k$ and
-    $a\equiv b\ (mod\ p^j)$, then we say that \underline{$b$ lies above $a$}, or
-    \underline{$a$ lifts to $b$}.
-    \item If $a\equiv b\ (mod\ p^j)$, then $a$ is called a \underline{nonsingular}
-    root if $f'(a)\not\equiv 0\ (mod\ p)$; otherwise it is \underline{singular}.
-    \item By Hensel's lemma we see that a nonsingular root $a\ (mod\ p)$ lifts
-    to a unique root $a_2\ (mod\ p^2)$. Since $a_2\equiv a\ (mod\ p)$ it follows
-    by theorem 2.2 that $f'(a_2)\equiv f'(a)\not\equiv 0\ (mod\ p)$. By a second
-    application of Hensel's lemma we may lift $a_2$ to form a root $a_3$ of $f(x)$
-    modulo $p^3$, and so on.
-    \item In general we find that a nonsingular root $a$ modulo $p$ lifts to a
-    uniques root $a_j$ modulo $p^j$ ofr $j=2,3,...$ by (2.5) we see that this
-    sequence is generated bby means of the recursion
+    \item If $f(a)\equiv0\ (mod\ p^j)$, $f(b)\equiv 0\ (mod\ p^k)$, $j<k$ and $a\equiv b\ (mod\ p^j)$, then we say that \underline{$b$ lies above $a$}, or \underline{$a$ lifts to $b$}.
+    \item If $a\equiv b\ (mod\ p^j)$, then $a$ is called a \underline{nonsingular} root if $f'(a)\not\equiv 0\ (mod\ p)$; otherwise it is \underline{singular}.
+    \item By Hensel's lemma we see that a nonsingular root $a\ (mod\ p)$ lifts to a unique root $a_2\ (mod\ p^2)$. Since $a_2\equiv a\ (mod\ p)$ it follows by theorem 2.2 that $f'(a_2)\equiv f'(a)\not\equiv 0\ (mod\ p)$. By a second application of Hensel's lemma we may lift $a_2$ to form a root $a_3$ of $f(x)$ modulo $p^3$, and so on.
+    \item In general we find that a nonsingular root $a$ modulo $p$ lifts to a uniques root $a_j$ modulo $p^j$ ofr $j=2,3,...$ by (2.5) we see that this sequence is generated bby means of the recursion
     \begin{align}
         a_{j+1} = a_j-f(a_j)\overline{f'(a)}
     \end{align}
-    where $f'(a)$ is an integer chosen so that
-    $f'(a)\overline{f'(a)}\equiv 1\ (mod\ p)$.
+    where $f'(a)$ is an integer chosen so that $f'(a)\overline{f'(a)}\equiv 1\ (mod\ p)$.
 \end{itemize}
 
 \textbf{Example:}
 Solve $x^2+x+47\equiv 0\ (mod\ 7^3)$
 
 \textbf{Solution:}
-First we note that $x\equiv 1\ (mod\ 7)$ and $x\equiv 5\ (mod\ 7)$ are the only
-solutions of $x^2+x+47\equiv 0\ (mod\ 7)$. Since $f'(x)=2x+1$, we see that
+First we note that $x\equiv 1\ (mod\ 7)$ and $x\equiv 5\ (mod\ 7)$ are the only solutions of $x^2+x+47\equiv 0\ (mod\ 7)$. Since $f'(x)=2x+1$, we see that
 \begin{itemize}
     \item $f'(1)=3\equiv 0\ (mod\ 7)$
     \item $f'(5)=11\equiv 0\ (mod\ 7)$
 \end{itemize}
 \textit{(So these roots are non singular)}\\
-Taking $f'(1)=5$, we see by (40) that the root $a\equiv 1\ (mod\ 7)$ lifts to
-$a_2=1$. Since $a_2$ is considered $(mod\ 7^2)$, we may take instead $a_2=1$.
-Then $a_3=1-49\cdot5\equiv 99\ (mod\ 7^3)$. Similarly, we take $\overline{f'(5)}=2$
-and see by (40) that the root $5\ (mod\ 7)$ lifts to
-$5-77\cdot2=-149\equiv 47\ (mod\ 7^2)$ and that $47\ (mod\ 7^2)$ lifts to
-$47-f(47)\cdot2=47-2303\cdot2=-4599\equiv 243\ (mod\ 7^3)$.
-Thus we conclude that $99$ and $243$ are the desired roots and that there are
-no others.
+Taking $f'(1)=5$, we see by (40) that the root $a\equiv 1\ (mod\ 7)$ lifts to $a_2=1$. Since $a_2$ is considered $(mod\ 7^2)$, we may take instead $a_2=1$. Then $a_3=1-49\cdot5\equiv 99\ (mod\ 7^3)$. Similarly, we take $\overline{f'(5)}=2$ and see by (40) that the root $5\ (mod\ 7)$ lifts to $5-77\cdot2=-149\equiv 47\ (mod\ 7^2)$ and that $47\ (mod\ 7^2)$ lifts to $47-f(47)\cdot2=47-2303\cdot2=-4599\equiv 243\ (mod\ 7^3)$. Thus we conclude that $99$ and $243$ are the desired roots and that there are no others.
 
 % Lecture 17
 
@@ -873,49 +636,22 @@ $f(x)\equiv 0\ (mod\ m)$ $\to$ $f(x)\equiv 0\ (mod\ p)$\quad \textit{(reduced)}\
 (No general mathod exists to solve such congruences)
 
 \textbf{Question:}\\
-Given a polynomial congruence $f(x)\equiv 0\ (mod\ m)$ is there an analogue to
-the result in algebra which says that a polynomial equation of degree $n$ with
-complex coefficients has exactly $n$ roots?\\
+Given a polynomial congruence $f(x)\equiv 0\ (mod\ m)$ is there an analogue to the result in algebra which says that a polynomial equation of degree $n$ with complex coefficients has exactly $n$ roots?\\
 $\to$ for congruences the solution is more complicated.
 
-e.g. For any $m>1$, there are $f(x)$ such that $f(x)\equiv 0\ (mod\ m)$
-has no solutions.
+e.g. For any $m>1$, there are $f(x)$ such that $f(x)\equiv 0\ (mod\ m)$ has no solutions.
 
-e.g.2 $x^p-x+1\equiv 0\ (mod\ m)$, where $p$ is a prime factor of $m$ has no
-solutions because $x^p-x+1\equiv 0\ (mod\ p)$ has none, by Fermat's Theorem.
+e.g.2 $x^p-x+1\equiv 0\ (mod\ m)$, where $p$ is a prime factor of $m$ has no solutions because $x^p-x+1\equiv 0\ (mod\ p)$ has none, by Fermat's Theorem.
 
-$f(x)=a_nx^n+a_{n-1}x^{n-1}+...+a_1x+a_0$ and we assume $p\nmid a_n$
-so that the congruence $f(x)\equiv 0\ (mod\ p)$ has degree $n$.
+$f(x)=a_nx^n+a_{n-1}x^{n-1}+...+a_1x+a_0$ and we assume $p\nmid a_n$ so that the congruence $f(x)\equiv 0\ (mod\ p)$ has degree $n$.
 
 \textbf{Theorem 2.25:}\\
-If the degree $n$ of $f(x)\equiv 0\ (mod\ p)$ is greater than or equal to $p$,
-then either every integer is a solution of $f(x)\equiv 0\ (mod\ p)$ or there is
-a polynomial $g(x)$ having integral coefficients, with leading coefficient $1$,
-such that $g(x)\equiv 0\ (mod\ p)$ is of degree less than $p$ and the solutions
-of $g(x)\equiv 0\ (mod\ p)$ are precisely those of $f(x)\equiv 0\ (mod\ p)$.
+If the degree $n$ of $f(x)\equiv 0\ (mod\ p)$ is greater than or equal to $p$, then either every integer is a solution of $f(x)\equiv 0\ (mod\ p)$ or there is a polynomial $g(x)$ having integral coefficients, with leading coefficient $1$, such that $g(x)\equiv 0\ (mod\ p)$ is of degree less than $p$ and the solutions of $g(x)\equiv 0\ (mod\ p)$ are precisely those of $f(x)\equiv 0\ (mod\ p)$.
 
 \textbf{Proof:} Theorem 2.25\\
-Dividing $f(x)$ by $x^p-x$ we get a quotient $q(x)$ and a remainder $r(x)$
-such that $f(x)=(x^-x)q(x)+r(x)$. here $q(x)$ and $r(x)$ are polynomials
-with integral coefficients, and $r(x)=0$ or degree $r(x)<p$. Since every
-integer is a solutions of $x^p\equiv x\ (mod\ p)$ are the same as those of
-$r(x)\equiv 0\ (mod\ p)$ by Fermat's theorem, we see that the solutions of
-$f(x)\equiv 0\ (mod\ p)$ are the same as those of $r(x)\equiv 0\ (mod\ p)$.
-If $r(x)=0$ or if every coefficient of $r(x)$ is divisible by $p$, then every
-integer is a solution of $f(x)\equiv 0\ (mod\ p)$.
+Dividing $f(x)$ by $x^p-x$ we get a quotient $q(x)$ and a remainder $r(x)$ such that $f(x)=(x^-x)q(x)+r(x)$. here $q(x)$ and $r(x)$ are polynomials with integral coefficients, and $r(x)=0$ or degree $r(x)<p$. Since every integer is a solutions of $x^p\equiv x\ (mod\ p)$ are the same as those of $r(x)\equiv 0\ (mod\ p)$ by Fermat's theorem, we see that the solutions of $f(x)\equiv 0\ (mod\ p)$ are the same as those of $r(x)\equiv 0\ (mod\ p)$. If $r(x)=0$ or if every coefficient of $r(x)$ is divisible by $p$, then every integer is a solution of $f(x)\equiv 0\ (mod\ p)$.
 
-On the other hand, if at least one coefficient of $r(x)$ is not divisible by
-$p$, then the congruence $r(x)\equiv 0\ (mod\ p)$ has a degree, and that degree
-is  less than $p$. The polynomial $g(x)$ in the theorem can be obtained from
-$r(x)$ by getting leading coefficient $1$, as follows. We may discard all terms
-in $r(x)$ whose coefficients are divisible by $p$, since the congruence
-properties modulo $p$ are unaltered. Then let $bx^m$ be the term of the highest
-degree in $r(x)$, with $(b,p)=1$. Choose $\overline{b}$ so that
-$b\overline{b}\equiv 1\ (mod\ p)$, and note that $(\overline{b},b)=1$ also. Then
-the congruence $\overline{b}r(x)\equiv 0\ (mod\ p)$ has the same solutions as
-$r(x)\equiv 0\ (mod\ p)$, and so has the same solutions as $f(x)\equiv 0\ (mod\ p)$.
-Define $g(x)=\overline{b}r(x)$ with its leading coefficient $b\overline{b}$
-replaced by 1, that is,
+On the other hand, if at least one coefficient of $r(x)$ is not divisible by $p$, then the congruence $r(x)\equiv 0\ (mod\ p)$ has a degree, and that degree is  less than $p$. The polynomial $g(x)$ in the theorem can be obtained from $r(x)$ by getting leading coefficient $1$, as follows. We may discard all terms in $r(x)$ whose coefficients are divisible by $p$, since the congruence properties modulo $p$ are unaltered. Then let $bx^m$ be the term of the highest degree in $r(x)$, with $(b,p)=1$. Choose $\overline{b}$ so that $b\overline{b}\equiv 1\ (mod\ p)$, and note that $(\overline{b},b)=1$ also. Then the congruence $\overline{b}r(x)\equiv 0\ (mod\ p)$ has the same solutions as $r(x)\equiv 0\ (mod\ p)$, and so has the same solutions as $f(x)\equiv 0\ (mod\ p)$. Define $g(x)=\overline{b}r(x)$ with its leading coefficient $b\overline{b}$ replaced by 1, that is,
 \begin{align}
     g(x)=\overline{b}r(x)-(b\overline{b}-1)x^m
 \end{align}
@@ -924,22 +660,13 @@ replaced by 1, that is,
 The congruence $f(x)\equiv 0\ (mod\ p)$ of degree $n$ has at most $n$ solutions.
 
 \textbf{Proof:} Theorem 2.26\\
-The proof is by induction on the degree of $f(x)\equiv 0\ (mod\ p)$.
-If $n=0$, the polynomial $f(x)=a_0$ with $a_0\not\equiv 0\ (mod\ p)$ and hence
-the congruence has no solutions. If $n=1$, the congruence has exactly one
-solutions by theorem 2.17.
-Assume the truth of the theorem for all congruences of degree $<n$, supppose that
-there were more than $n$ solutions of the congruence $f(x)\equiv 0\ (mod\ p)$ of
-degree $n$. Let the leading term of $f(x)$ be $a_nx^n$ and let $u_1,...,u_{n+1}$
-be solutions of the congruence with $u_1\not\equiv u_j\ (mod\ p)$ for $i\neq j$.
-We define $g(x)$ by
+The proof is by induction on the degree of $f(x)\equiv 0\ (mod\ p)$. If $n=0$, the polynomial $f(x)=a_0$ with $a_0\not\equiv 0\ (mod\ p)$ and hence the congruence has no solutions. If $n=1$, the congruence has exactly one solutions by theorem 2.17. Assume the truth of the theorem for all congruences of degree $<n$, supppose that there were more than $n$ solutions of the congruence $f(x)\equiv 0\ (mod\ p)$ of degree $n$. Let the leading term of $f(x)$ be $a_nx^n$ and let $u_1,...,u_{n+1}$ be solutions of the congruence with $u_1\not\equiv u_j\ (mod\ p)$ for $i\neq j$. We define $g(x)$ by
 \begin{align}
     g(x)=f(x)-a_n(x-u_1)...(x-u_n)
 \end{align}
 noting the cancellation of $a_nx^n$ on the right.
 
-Note that $g(x)\equiv 0\ (mod\ p)$ has at least $n$ solutions, namely $u_1,...,u_n$.
-We cansider two cases:
+Note that $g(x)\equiv 0\ (mod\ p)$ has at least $n$ solutions, namely $u_1,...,u_n$. We consider two cases:
 
 \renewcommand{\theenumi}{\roman{enumi}}
 \begin{enumerate}
@@ -947,28 +674,19 @@ We cansider two cases:
     \item at least one coefficient is not divisible by $p$
 \end{enumerate}
 
-For (i), every integer is a solution of $g(x)\equiv 0\ (mod\ p)$, and since
-$f(u_{n+1})\equiv 0\ (mod\ p)$ by assumption, it follows that $x=u_{n+1}$ is a
-solutions of
+For (i), every integer is a solution of $g(x)\equiv 0\ (mod\ p)$, and since $f(u_{n+1})\equiv 0\ (mod\ p)$ by assumption, it follows that $x=u_{n+1}$ is a solutions of
 \begin{align}
     a_n(x-u_1)...(x-u_n)\equiv 0\ (mod\ p)
 \end{align}
 This contradicts theorem 1.15.
 
-For (ii), we note that $g(x)\equiv 0\ (mod\ p)$ has a degree and that degree is
-$<n$. By the induction hypothesis, this congruence has fewer than n solutions. This
-contradicts the earlier observation that this congruence has at least $n$ solutions.
-Thus the proof is complete.
+For (ii), we note that $g(x)\equiv 0\ (mod\ p)$ has a degree and that degree is $<n$. By the induction hypothesis, this congruence has fewer than n solutions. This contradicts the earlier observation that this congruence has at least $n$ solutions. Thus the proof is complete.
 
 \textbf{Corollary 2.27:}
-If $b_nx^n+b_{n-1}x^{n-1}+...+b_0\equiv 0\ (mod\ p)$ has more than $n$ solutions,
-then all the coefficients $b_j$ are divisible by $p$.
+If $b_nx^n+b_{n-1}x^{n-1}+...+b_0\equiv 0\ (mod\ p)$ has more than $n$ solutions, then all the coefficients $b_j$ are divisible by $p$.
 
 \textbf{Theorem 2.28:}\\
-If $F(x)$ is a function that maps residue classes $(mod\ p)$ to residue classes
-$(mod\ p)$, then there is a polynomial $f(x)$ with integral coefficients and
-degree at most $p-1$ such that $f(x)\equiv F(x)\ (mod\ p)$ for all residue
-classes $x\ (mod\ p)$.
+If $F(x)$ is a function that maps residue classes $(mod\ p)$ to residue classes $(mod\ p)$, then there is a polynomial $f(x)$ with integral coefficients and degree at most $p-1$ such that $f(x)\equiv F(x)\ (mod\ p)$ for all residue classes $x\ (mod\ p)$.
 
 \textbf{Proof:} Theorem 2.28\\
 By Fermat's Congruence we see that
@@ -983,37 +701,18 @@ Hence the polynomial
 had the desired properties.
 
 \textbf{Theorem 2.29:}\\
-The congruencs $f(x)\equiv 0\ (mod\ p)$ of degree $n$ with leading coefficient
-$a_n=1$ has $n$ solutions iff $f(x)$ is a factor of $x^p-x$ modulo $p$, that is
-if and only if $x^p-x=f(x)q(x)+ps(x)$, where $q(x)$ and $s(x)$ have integral
-coefficients, $q(x)$ has degree $p-n$ and leading coefficient $1$, and where
-$s(x)$ is a polynomial of degree less than $n$ or $s(x)$ is zero.
+The congruencs $f(x)\equiv 0\ (mod\ p)$ of degree $n$ with leading coefficient $a_n=1$ has $n$ solutions iff $f(x)$ is a factor of $x^p-x$ modulo $p$, that is if and only if $x^p-x=f(x)q(x)+ps(x)$, where $q(x)$ and $s(x)$ have integral coefficients, $q(x)$ has degree $p-n$ and leading coefficient $1$, and where $s(x)$ is a polynomial of degree less than $n$ or $s(x)$ is zero.
 
 \textbf{Proof:} Theorem 2.29\\
-First we assume that $f(x)\equiv 0\ (mod\ p)$ has $n$ solutions. Then $n\leq p$
-by defintion 2.4. Dividing $x^p-x$ by $f(x)$ we get $x^p-x=f(x)q(x)=r(x)$ where
-degree $r(x)<n$ or $r(x)<n$ or $r(x)=0$. This equation implies
-(using Fermat's theorem) that every solution of $f(x)\equiv 0\ (mod\ p)$ is a
-solution of $r(x)\equiv 0\ (mod\ p)$. Thus $r(x)\equiv 0\ (mod\ p)$ has at least
-$n$ solutions and by Corollary 2.27, it follows that every coefficient in $r(x)$
-is divisible by $p$, so $r(x)=ps(x)$ as in the theorem.
+First we assume that $f(x)\equiv 0\ (mod\ p)$ has $n$ solutions. Then $n\leq p$ by defintion 2.4. Dividing $x^p-x$ by $f(x)$ we get $x^p-x=f(x)q(x)=r(x)$ where degree $r(x)<n$ or $r(x)<n$ or $r(x)=0$. This equation implies (using Fermat's theorem) that every solution of $f(x)\equiv 0\ (mod\ p)$ is a solution of $r(x)\equiv 0\ (mod\ p)$. Thus $r(x)\equiv 0\ (mod\ p)$ has at least $n$ solutions and by Corollary 2.27, it follows that every coefficient in $r(x)$ is divisible by $p$, so $r(x)=ps(x)$ as in the theorem.
 
-Conversely, assume that $x^p-x=f(x)q(x)+ps(x)$ as in the theorem.
-By Fermat's theorem, the congruence $f(x)q(x)\equiv 0\ (mod\ p)$ has $p$ solutions.
-This congruence has leading term $x^p$. The leading term of $f(x)$ is $x^n$ by
-hypothesis, and hence the leading term of $q(x)$ is $x^{p-n}$. By theorem 2.26,
-the congruence $f(x)\equiv 0\ (mod\ p)$ and $q(x)\equiv 0\ (mod\ p)$ have at
-most $n$ solutions and $p-n$ solutions, respectively. But every one of the p
-solutions of $f(x)\equiv 0\ (mod\ p)$ has a solution of at least one of the
-congruences $f(x)\equiv 0\ (mod\ p)$ and $q(x)\equiv 0\ (mod\ p)$. It follows
-that the two congruences have exactly $n$ solutions and $p-n$ solutions, respectively.
+Conversely, assume that $x^p-x=f(x)q(x)+ps(x)$ as in the theorem. By Fermat's theorem, the congruence $f(x)q(x)\equiv 0\ (mod\ p)$ has $p$ solutions. This congruence has leading term $x^p$. The leading term of $f(x)$ is $x^n$ by hypothesis, and hence the leading term of $q(x)$ is $x^{p-n}$. By theorem 2.26, the congruence $f(x)\equiv 0\ (mod\ p)$ and $q(x)\equiv 0\ (mod\ p)$ have at most $n$ solutions and $p-n$ solutions, respectively. But every one of the $p$ solutions of $f(x)\equiv 0\ (mod\ p)$ has a solution of at least one of the congruences $f(x)\equiv 0\ (mod\ p)$ and $q(x)\equiv 0\ (mod\ p)$. It follows that the two congruences have exactly $n$ solutions and $p-n$ solutions, respectively.
 
 \textbf{Corollary 2.30:}
 If $d|(p-1)$, then $x^d\equiv 1\ (mod\ p)$ has $d$ solutions.
 
 \textbf{Proof:} Corollary 2.30\\
-Choose $e$ so that $de=p-1$. Since $(y-1)(1+y+...+y^{e-1})=y^e-1$, on taking $y=x^d$
-we see that $x(x^d-1)(1+x^d+...+x^{d(e-1)})=x^p-x$.
+Choose $e$ so that $de=p-1$. Since $(y-1)(1+y+...+y^{e-1})=y^e-1$, on taking $y=x^d$ we see that $x(x^d-1)(1+x^d+...+x^{d(e-1)})=x^p-x$.
 
 Consider
 \begin{align*}
@@ -1024,33 +723,19 @@ We assume $p>2$. On expanding, we find that
     f(x)=x^{p-1}-\sigma_{1}x^{p-2}+\sigma_{2}x^{p-3}-...+\sigma_{p-1}
 \end{align}
 
-where $\sigma_j$ is the sum of all products of $J$ distinct members of the set
-$\{1,2,..,p-1\}$. In the two extreme cases we have $\sigma_1=1+2+3+...+(p-1)=\frac{p-1}{2}$,
-and $\sigma_{p-1}=1\dot2\dot3\dot...\dot(p-1)=(p-1)!$. The polynomial f(x) has degree $p-1$
-and has the $p-1$ roots $1,2,...,p-1\ (mod\ p)$. consequently, the polynomial $xf(x)$
-has degree $p$ and has $p$ roots. By theorem 2.29 in $xf(x)$, we see that there are polynomials
-$q(x)$ and $s(x)$ such that $x^p-x=xf(x)q(x)+ps(x)$.
-Since the degree $q(x)=p-p=0$ and leading coefficient $1$, we see that $q(x)=1$.
-that is, $x^p-x=xf(x)+ps(x)$, which is to say that the coefficients of $x^p-x$ are congruent
-$mod(\ p)$to those of $xf(x)$. On comparing the coefficients of $x$, we deduce that $\sigma_{p-1}=(p-1)!\equiv -1\ (mod\ p)$,
-which provides a second proof of Wilson's congruence. On comparing the remaining coefficients,
-we deduce that $\sigma_{p}\equiv 0\ (mod\ p)$ for $1\leq j\leq p-2$. To these useful
-observations, we may add one further remark: if $p\geq 5$ then
+where $\sigma_j$ is the sum of all products of $J$ distinct members of the set $\{1,2,..,p-1\}$. In the two extreme cases we have $\sigma_1=1+2+3+...+(p-1)=\frac{p-1}{2}$, and $\sigma_{p-1}=1\dot2\dot3\dot...\dot(p-1)=(p-1)!$. The polynomial f(x) has degree $p-1$ and has the $p-1$ roots $1,2,...,p-1\ (mod\ p)$. consequently, the polynomial $xf(x)$ has degree $p$ and has $p$ roots. By theorem 2.29 in $xf(x)$, we see that there are polynomials $q(x)$ and $s(x)$ such that $x^p-x=xf(x)q(x)+ps(x)$. Since the degree $q(x)=p-p=0$ and leading coefficient $1$, we see that $q(x)=1$. that is, $x^p-x=xf(x)+ps(x)$, which is to say that the coefficients of $x^p-x$ are congruent $mod(\ p)$to those of $xf(x)$. On comparing the coefficients of $x$, we deduce that $\sigma_{p-1}=(p-1)!\equiv -1\ (mod\ p)$, which provides a second proof of Wilson's congruence. On comparing the remaining coefficients, we deduce that $\sigma_{p}\equiv 0\ (mod\ p)$ for $1\leq j\leq p-2$. To these useful observations, we may add one further remark: if $p\geq 5$ then
 \begin{align*}
     \sigma_{p-2}\equiv 0\ (mod\ p^2)
 \end{align*}
-This is Wolstenholme's congruence. To prove it, we note that $f(p)=(p-1)(p-1)...(p-p+1)=(p-1)!$
-On taking $x=p$ in (47) we have
+This is Wolstenholme's congruence. To prove it, we note that $f(p)=(p-1)(p-1)...(p-p+1)=(p-1)!$ On taking $x=p$ in (47) we have
 \begin{align*}
     (p-1)! = p^{p-1}-\sigma_1p^{p-2}+...+\sigma_{p-3}p^2-\sigma_{p-2}p+\sigma_{p-1}
 \end{align*}
-We already know that $\sigma_{p-1}=(p-1)!$ On subtracting this amount from both sides
-and dividing through by $p$, we deduce that
+We already know that $\sigma_{p-1}=(p-1)!$ On subtracting this amount from both sides and dividing through by $p$, we deduce that
 \begin{align*}
     p^{p-2}-\sigma_{1}p^{p-3}+...+\sigma_{p-3}p-\sigma_{p-2}=0
 \end{align*}
-All terms except the last two contains visible factors of $p^2$. Thus
-$\sigma_{p-3}p\equiv \sigma_{p-2}\ (mod\ p^2)$. This gives the desired result, since $\sigma_{p-3}\equiv 0\ (mod\ p)$
+All terms except the last two contains visible factors of $p^2$. Thus $\sigma_{p-3}p\equiv \sigma_{p-2}\ (mod\ p^2)$. This gives the desired result, since $\sigma_{p-3}\equiv 0\ (mod\ p)$
 
 \textbf{Theorem 3.2:} Gauss' Lemma\\
 Let $p$ be an odd prime and $(a,p)=1$.
@@ -1067,19 +752,12 @@ and their least positive residues
     \frac{p}{q}\frac{q}{p}=(-1)^{\frac{p-1}{2}\frac{q-1}{2}}
 \end{align}
 
-Note: If $p$ and $q$ are distinct odd primes of the form $4k+3$, then one of
-the congruences $x^2\equiv p\ (mod\ q)$ or $x^2\equiv q\ (mod\ p)$
-is a solutions and the other is not.
-However, if at least one of the primes is of the for $4k+3$, then both
-congruences are soluable or both are not.
+Note: If $p$ and $q$ are distinct odd primes of the form $4k+3$, then one of the congruences $x^2\equiv p\ (mod\ q)$ or $x^2\equiv q\ (mod\ p)$ is a solutions and the other is not. However, if at least one of the primes is of the for $4k+3$, then both congruences are soluable or both are not.
 
 \textbf{Proof:} Theorem 3.4\\
-Let $S$ be the set of pairs of of integers $(x,y)$ such that $1\leq x\leq\frac{p-1}{2}$
-and $1\leq y\leq\frac{q-1}{2}$.
+Let $S$ be the set of pairs of of integers $(x,y)$ such that $1\leq x\leq\frac{p-1}{2}$ and $1\leq y\leq\frac{q-1}{2}$.
 
-The set $S$ has $\frac{(p-1)(q-1)}{4}$ elements. Seperate this set into two mutually
-exclusive subsets $S_1$ and $S_2$ according $qx>py$ or $qx<py$.
-Note that there are no pairs $(x,y)\in S$ such that $qx=py$.
+The set $S$ has $\frac{(p-1)(q-1)}{4}$ elements. Seperate this set into two mutually exclusive subsets $S_1$ and $S_2$ according $qx>py$ or $qx<py$. Note that there are no pairs $(x,y)\in S$ such that $qx=py$.
 
 The set $S_1$ can be described as the set of all pairs $(x,y)$ such that
 \begin{align}
