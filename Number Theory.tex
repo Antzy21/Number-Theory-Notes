@@ -744,6 +744,168 @@ Let $p$ be an odd prime and $(a,p)=1$.
 \end{align}
 and their least positive residues
 
+% Lecture 18
+
+\subsection{Primitive Roots and Power Residues}
+
+\textbf{Definition 2.6:}Order of a Modulo\\
+Let $m>0, m\in\mathbb{Z}$ and $a\in\mathbb{z}$ such that $(a,m)=1$. Let $h$ be the smallet positive integer such that $a^h\equiv 1\ (mod\ m)$. In this case, we say that the order of a modulo $m$ is $h$, or that $a$ belongs to the exponent $h$ modulo $m$.
+
+Suppose that $a$ has order $h\ (mod\ m)$. Let $k=qh>0$, then $a^k=a^{qh}=(a^h)^q\equiv 1^q\equiv 1\ (mod\ m)$.
+Conversely, $k>0$ such that $a^k\equiv 1\ (mod\ m)$, then by the division algorithm, we have $k=qh+r, q\geq0$ and $0\leq r\leq h$. Thus $1\equiv a^k\equiv a^{qh+r}\equiv (a^h)^qa^r\equiv 1^qa^r\equiv a^r\ (mod\ m)$. But $0\leq r<h$ and $h$ is the least positive power of $a$ that is congruent to $1\ (mod\ m)$, so it follows $r=0$. Thus $h|k$ and we have proved that following
+
+\textbf{Lemma 2.31:}\\
+If $a$ has order $h\ (mod\ m)$, then the positive integers $k$ such that $a^k\equiv 1\ (mod\ m)$ are precisely those for which $h|k$.
+
+\textbf{Corollary 2.32:}\\
+If $(a,m)=1$, then the order of a modulo $m$ divides $\Phi(m)$.
+
+\textbf{Proof:}\\
+Each reduced residue class $a$ modulo $m$ has finite order, for by Euler's congruence $a^{\Phi(m)}\equiv 1\ (mod\ m)$. Moreover, if $a$ has order $h$ then by taking $k=\Phi(m)$ in the lemma, we deduce that $h|phi(m)$.
+
+\textbf{Lemma 2.33:}\\
+If $a$ has order $h\ (mod\ m)$, then $a^k$ has order $\frac{h}{(h,k)}\ (mod\ m)$
+
+Note:\\
+Since $\frac{h}{(h,k)}=1$ iff $h|k$, we see that Lemma 2.33 contains Lemma 2.31 as a special case.
+
+\textbf{Proof:}\\
+Lemma 2.31 says that $(a^k)^J\equiv 1\ (mod\ m)$ iff $h|k_J$. But $h|k_J$ iff $\{\frac{h}{(h,k)}\}|\{\frac{k}{h,k}\}J$. As the divisor is relatively prime to the first factor of the dividend, this relation holds iff $\{\frac{k}{h,k}|J$. Therefore the least positive integer $J$ such that $(a^k)^J\equiv 1\ (mod\ m)$ is $J=\frac{h}{(h,k)}$
+
+Note:\\
+If $a$ has order $h\ (mod\ m)$ and b has order $k\ (mod\ m)$ then $(ab)^{hk}=(a^h)^k(b^k)^h\equiv 1\ (mod\ m)$ and using Lemma 2.31 we deduce that the order of $ab$ is a divisor of $hk$.
+
+\textbf{Lemma 2.34:}\\
+If $a$ has order $h\ (mod\ m)$ and b has order $k\ (mod\ m)$ and if $(h,k)=1$, then $ab$ has order $hk\ (mod\ m)$.
+
+\textbf{Proof:} Lemma 2.34\\
+Let $r=$order of $ab \ (mod\ m)$. We have shown that $r|hk$. We now prove $hk|r$. We note that $b^{rh}\equiv (a^h)^rb^{rh}=(ab)^{rh}\equiv 1 \ (mod\ m)$. Thus $k|rh$ by Lemma 2.31. As $(h,k)=1$, it follows that $k|r$. By a similar argument we see that $h|r$. Using again $(h,k)=1$, we conclude that $hk|r$.
+
+\textbf{Definition 2.7:}Primative Root\\
+If $g$ belongs to the exponent $\Phi(m) \ (mod\ m)$, then $g$ is called a \underline{Primitive root}. $(g,m)=1$ and $g^{\Phi(m)}\equiv 1 \ (mod\ m)$ where $\Phi(m)$ is the smallest positive integer with such property.
+
+In view of Lemma 2.31, the number $a$ is a solution of the congruence $x^k \equiv 1 \ (mod\ m)$ iff the order of $a \ (mod\ m)$ divides $k$.
+
+In one special case, Corollary 2.30, we have determined the number of solutions of this congruence. That is, if $p$ is prime and $k|(p-1)$ the there are precicely $k$ residue classes $a \ (mod\ p)$ such that the order of a moulo $p$ is a divisor of $k$. If $k$ happens to be a prime power, we can then determine the exact number of residues $a \ (mod\ p)$ of order $k$.
+
+\textbf{Lemma 2.35:}\\
+The divisors of $q^\alpha$ are the numbers $q^\beta$ with $\beta = 0,1,...,\alpha$. Of these, $q^\alpha$ is the only one that is not a divisor of $q^{\alpha-1}$. There are $q^\alpha$ residues $\ (mod\ p)$ of order dividing $q^\alpha$, and among these there are $q^{\alpha-1}$ residues of order dividing $q^{\alpha-1}$. On subtracting we see that there are precisely $q^{\alpha}-q^{\alpha-1}$ residues $a$ of order $q^{\alpha} \ (mod\ p)$
+
+
+\textbf{Theorem 2.36:}\\
+If $p$ is a prime then there exists $\Phi(p-1)$ primitive roots $\ (mod\ p)$
+
+\textbf{Proof:} Theorem 2.36\\
+We first establish the existence of at least one primitive root.\\
+Let $p-1=p_1^{\alpha_1}p_2^{\alpha_2}...p_J^{\alpha_J}$. By lemma 2.35 we may choose numbers $a_i \ (mod\ p)$ so that $a_i$ has order $p_i^{\alpha_i}$, $i=1,2,...,J$. The numbers $p_i^{\alpha_i}$ are pairwise relatively prime, so by repeated use of lemma 2.34 we see that $g=a_1a_2...a_J$ has order $p_1^{\alpha_1}p_2^{\alpha_2}...p_J^{\alpha_J}=p-1$.\\
+That is, $g$ is a primitive root $\ (mod\ p)$.
+
+To complete the proof, we determine the exact number of primitive roots $\ (mod\ p)$.\\
+Let $g$ ne a primitive root $\ (mod\ p)$. Then the numbers $g,g^2,...,g^{p-1}$ form a system of reduced residues $\ (mod\ p)$. By Lemma 2.33 we see that $g^k$ has order $(p-1)/(k,p-1)$. Thus $g^k$ is a primitive root iff $(k,p-1)=1$. By definition of Euler's phi function, there are exactly $\Phi(p-1)$ such values of $k$ in the interval $1\leq k\leq p-1$.
+
+\textbf{Definition 2.8:} $n^{th}$ power residue\\
+If $(a,p)=1$ and $x^n \equiv a \ (mod\ p)$ has a solution,\\
+$a$ is called an \underline{$n^{th}$ power residue modulo $p$}
+
+If $(g,m)=1$ then the sequence $g,g^2,... \ (mod\ m)$ is periodic.\\
+If $g$ is a primitive root $\ (mod\ m)$ then the least period of this sequence is $\Phi(n)$ and we see that $g,g^2,...g^{\Phi(m)}$ form a system of reduced residues $\ (mod\ m)$. Thus $g^i \equiv g^J \ (mod\ m)$ iff $i \equiv j \ (mod\ \Phi(m))$. By expressing numbers as powers of $g$, we may convert a multiplicative congruence $\ (mod\ m)$ to an additive congruence $\ (mod\ \Phi(m))$.
+
+\textbf{Theorem 2.37:}\\
+If $p$ is a prime and $(a,p)=1$, then the congruence $x^n \equiv a \ (mod\ p)$ had $(n,p-1)$ solutions or no solutions according as
+\begin{align*}
+    a^{\frac{p-1}{(n,p-1)}} \equiv \ (mod\ p)
+\end{align*}
+or not.
+
+\textbf{Proof:} Theorem 2.37\\
+Let $g$ be a Primative root $\ (mod\ p)$, and choose $i$ such that $g^i \equiv a \ (mod\ p)$. If there is an $x$ such that $x^n \equiv a \ (mod\ p)$ then $(x,p)=1$, so that $x \equiv  g^u \ (mod\ p)$. Thus the proposed congruence is $g^{nu} \equiv g^i \ (mod\ p)$, which is equivalent to $nu \equiv i \ (mod\ p-1)$. Put $k = (m,p-1)$. By theorem 2.17, this has $k$ solutions if $k|i$, and no solutions if $k\nmid i$.\\
+If $k|i$, then $i(p-1)/k \equiv 0 \ (mod\ p-1)$, so that $a^\frac{(p-1)}{k} \equiv g^{i\frac{(p-1)}{k}} = g^{p-1}^{\frac{i}{k}} \equiv 1 \ (mod\ p)$.\\
+On the other hand, if $k\nmid i$, then $i(p-1/k \not \equiv (\ (mod\ p-1)))$, and hence $a^{\frac{p-1}{k}}\not \equiv 1 \ (mod\ p)$.
+
+Example: Show that the congruence $x^5 \equiv \ (mod\ 101)$ has 5 solutions.
+
+Solution: By using Binary Algorithm it suffices to verify that $6^20 \equiv 1 \ (mod\ 101)$
+
+\textbf{Corollary 2.38:}Euler's Criterion\\
+If $p$ is an off prime and $(a,p)=1$, then $x^2 \equiv a \ (mod\ p)$ has two solutions or no solutions according as $a^\frac{p-1}{z} \equiv 1 \ (mod\ p)$ or $a^\frac{p-1}{2} \equiv -1 \ (mod\ p)$.
+
+\textbf{Proof:} Corollary 2.38 \\
+Put $b=a^{\frac{(p-1)}{2}}$. Thus $b^2=a^{p-1} \equiv 1 \ (mod\ p)$ by Fermat's congruence. From lemma 2.10, it follows that $b \equiv \pm 1 \ (mod\ p)$.\\
+If $b \equiv -1 \ (mod\ p)$, then $x^2 \equiv a \ (mod\ p)$ has no solutions, by theorem 2.37.
+If $b \equiv 1 \ (mod\ p)$, then $x^2 \equiv a \ (mod\ p)$ has 2 solutions, by theorem 2.37.
+
+Primitive roots is a tool for analyzing certain congruences $\ (mod\ p)$. What can be said about other moduli?
+
+\textbf{Theorem 2.39:}\\
+If $p$ is a prime then there exists $\Phi(\Phi(p^2))=(p-1)\Phi(p-1)$ primitive roots $\ (mod\ p^2)$.
+
+\textbf{Proof:} Theorem 2.39\\
+Exercise
+
+\textbf{Theorem 2.40:}\\
+If $p$ is an odd prime and $g$ is a primitive root $\ (mod\ p^2)$, then $g$ is a primitive root $\ (mod\ p^{\alpha})$ for $\alpha = 3,4,5...$
+
+\textbf{Proof:} Theorem 2.40\\
+The prime $p=2$ must be excluded, for $g=3$ is a primitive root $\ (mod\ 4)$, but not $\ (mod\ 8)$. Indeed it is easy to verify that $a^2 \equiv 1 \ (mod\ 8)$, for any odd number $a$. As $\Phi(8)=4$, it follows that there is no primitive root $\ (mod\ 8)$.\\
+Suppose that $a$ is odd. Since $8|(a^2-1)$ and $2|(a^2+1)$, it follows that $16|(a^2-1)(a^2+1)=a^4-1$. That is $a^4 \equiv 1 \ (mod\ 16)$. On repeating this argument we see that $a^8 \equiv 1 \ (mod\ 32)$, and in general that $a^2^{\alpha-2} \equiv 1 \ (mod\ a^{\alpha})$ for $\alpha \geq 3$. Since $\Phi(2^{\alpha})=2^{\alpha-1}$ we conclude that if $\alpha \geq 3$ then
+\begin{align*}
+     a^\frac{\Phi(2^{\alpha})}{2} \equiv 1 \ (mod\ 2^{\alpha})
+\end{align*}
+for all odd $a$, and hence that there is no primitive root $\ (mod\ 2^{\alpha})$ for $\alpha=3,4,5...$
+
+Suppose that $p$ is an odd prime and that $g$ is a primitive root $\ (mod\ p^{\alpha})$. We may suppose that $g$ is odd, for if $g$ is even then we have only to replace $g$ by $g+p^{\alpha}$, which is odd. The numbers $g,g^2,...,g^{\Phi(p^{\alpha})}$ forms a reduced residue system $\ (mod\ p^{\alpha})$. Since these numbers are odd, they also form a reduced residue system $\ (mod\ 2p^{\alpha})$. Thus $g$ is a primitve root $\ (mod\ 2p^{\alpha})$.
+
+We have established that a primitive root exists $\ (mod\ m)$ when $m=1,2,4,p^{\alpha}$ or $2p^{\alpha}$, ($p$ odd prime) but that there is no primitive root $\ (mod\ 2^{\alpha})$ for $\alpha\geq 3$. Suppose now that $m$ is not a prime power or twice a prime power. Then $m$ can be expressed as a product, $m=m_1m_2$ with $(m_1,m_2)=1$, $m_1>2$, $m_2>2$. Let $e=lcm(\Phi(m_1),\Phi(m_2))$. If $(a,m)=1$ then $(a,m_1)=1$ so that $a^{\Phi(m_1)} \equiv 1 \ (mod\ m_1)$, and hence $a^e \equiv 1 \ (mod\ m_1)$. Similarly $a^e \equiv 1 \ (mod\ m_2)$, and hence $a^e \equiv 1 \ (mod\ m)$.
+Since $2|\Phi(n)$ for all $n>2$, we see that $2|(\Phi(m_1),\Phi(m_2))$, so that by theorem 1.13:
+\begin{align*}
+    e = \frac{\Phi(m_1)\Phi(m_2)}{(\Phi(m_1),\Phi(m_2))} < \Phi(m_1)\Phi(m_2) = \Phi(m)
+\end{align*}
+Thus there is no primitive root in this case.
+
+So we then have...
+
+\textbf{Theorem 2.41:}\\
+There exists a primitive root $\ (mod\ m)$ iff $m=1,2,4,p^{\alpha}$ or $2p^{\alpha}$, where $p$ is an odd prime.\\
+Theorem 2.37 and its proof generalises to any modulus $m$ possessing a primitive root.
+
+\textbf{Corollary 2.42:}\\
+Suppose that $m=1,2,4,p^{\alpha}$ or $2p^{\alpha}$, where $p$ is odd prime. If $(a,m)=1$ then the congruence $x^n \equiv a \ (mod\ m)$ has $(n,\Phi(m))$ solutions or no solutions, according as
+\begin{align*}
+    a^{\frac{\Phi(m)}{(n,\Phi(m))}} \equiv 1 \ (mod\ m)
+\end{align*}
+or not.
+
+Example:\\
+Determine the number of solutions of the congruence $x^4 \equiv 61 \ (mod\ 117)$
+
+Solution:\\
+We note that $117 = 3^2\dot 13$
+As $\Phi(9)/(4,\Phi(9))=6/(4,6)=3$ and $61^3 \equiv (-2)^3 \equiv 1 \ (mod\ 9)$ we deduce that the congruence $x^4 \equiv 61 \ (mod\ 9)$ has $(4,\Phi(9))=2$ solutions.\\
+Similarly $\Phi(13)/(4,\Phi(13))==3$ and $61^3 \equiv (-4)^3 \equiv  1 \ (mod\ 13)$ so the congruence $x^4 \equiv 61 \ (mod\ 13)$ has $(4,\Phi(13))=4$ solutions.\\
+Thus by theorem 2.20, the number of solutions $\ (mod\ 117)$ is $2\dot4 = 8$.
+
+This method fails in case the modulus is divisible by $8$, as corollary $2.42$ does not apply to higher powers of $2$.
+
+For this we have...
+
+\textbf{Theorem 2.43:}\\
+Suppose that $\alpha\geq 2$. The order of $5 \ (mod\ 2^\alpha)$ is $2^{\alpha-2}$. The numbers $\pm 5,\pm 5^2,...,\pm 5^2^{\alpha-2}$ form a system of reduced residues $\ (mod\ 2^{\alpha})$. If $a$ is odd, then there exists $i$ and $J$ such that $a \equiv  (-1)^i5^J \ (mod\ 2^{\alpha})$. The values of $i$ and $J$ are uniquely determined $\ (mod\ 2)$ and $(\ (mod\ 2^{\alpha-2}))$, respectively.
+
+\textbf{Corollary 2.44:}\\
+Suppose $\alpha \geq 3$ and that $a$ is odd.\\
+If $n$ is odd, then the congruence $x^n \equiv  a \ (mod\ 2^{\alpha})$ has exactly one solution.\\
+If $n$ is even, then choose $\beta$ such that $(n,2^{\alpha-2})=2^\beta$. The congruence $x^n \equiv a \ (mod\ 2^{\alpha})$ has $2^{\beta+1}$ solutions or no solutions according as $a \equiv  1 \ (mod\ 2^{\beta+2})$ or not.
+
+% lecture 19
+
+\section{Quadratic Reciprocity and Quadratic Forms}
+
+% Lecture 19
+
+\subsection{Quadratic Residues}
+
+\subsection{Quadratic Reciprocity}
+
 % Lecture 20
 
 \textbf{Theorem 3.4:}\\
