@@ -33,7 +33,7 @@ Then $S$ consists of all the positive integers
 \subsection{Divisibility}
 
 \textbf{Definition 1.1:} Divisibility\\
-An integer $b$ is divisible by and integer $a\neq0$ if there is an integer $x$ such that $b=ax$.\\
+An integer $b$ is divisible by an integer $a\neq0$ if there is an integer $x$ such that $b=ax$.\\
 We write $a|b$ (a divides b)
 
 \textbf{Theorem 1.1:} Properties of divisibility
@@ -67,7 +67,7 @@ $...,b-3a,b-2a,b-a,b,b+a,b+2a,b+3a,...$
 
 In the sequence select the smallest non-negative member and denote it by $r$. Thus by definition $r$ satisfies the inequalities of the theorem. But also $r$, being in the sequence, is of the form $b-qa$, and thus q is defined in terms of $r$.
 
-To prove uniqueness we suppose there is another pair $q_1$ and $r_1$ satisfying the same conditions. First we prove that $r=r_1$. If not, we may presume that $r<r_1$ so that $=<r_1-r<a$ and then we see that $r_1-r=a(q-q_1)$ and so $a|(r_1-r)$, a contradiction to Theorem 1.1 (5). Hence $r=r_1$ and also $q=q_1$.
+To prove uniqueness we suppose there is another pair $q_1$ and $r_1$ satisfying the same conditions. First we prove that $r=r_1$. If not, we may presume that $r<r_1$ so that $0<r_1-r<a$ and then we see that $r_1-r=a(q-q_1)$ and so $a|(r_1-r)$, a contradiction to Theorem 1.1 (5). Hence $r=r_1$ and also $q=q_1$.
 
 Note: We stated the theorem with $a>0$. However this is not necessary and we may formulate as:
 
@@ -85,7 +85,7 @@ If $g=(b,c)$, then there exist $x_0,y_0\in\mathbb{Z}$ such that $g=(b,c)=bx_0+cy
 \textbf{Proof:} Theorem 1.3\\
 Consider the linear combination $bx+cy$, where $x,y$ range over all the integers. This set of integers \{$bx+cy$\} includes positive and negative values and also 0. ($x=y=0$). Choose $x_0$ and $y_0$ so that $bx_0+cy_0$ is the least positive integer $l$ in the set. Thus $l=bx_0+cy_0$.
 
-Next we prove that $l|b$ and $l|c$. Assume that $l \nmid b$ , then it follows that there exists integers $q$ and $r$ , by Theorem 1.2, such that $b=lq+r$ with $0<r<l$. Hence we have $r=b-lq=b-q(bx_0+cy_0)=b(l-qx_0)+c(-qy_0)$, and thus $r$ is in the set \{$bx+cy$\}. This contradicts the fact that $l$ is the least positive integer in \{$bx+cy\}$. Similar proof for $l|c$. Now since $g=(b,c)$ we may write $b=gB$ , $c=gC$ and $l=bx_0+cy_0=g(Bx_0+Cy_0)$. Thus $g|l $ and so by Theorem 1.1 (5) we conclude that $g \leq l$. We know $g<l$ is impossible since $g$ is the greatest common divisor, so $g=l=bx_0+cy_0$.
+Next we prove that $l|b$ and $l|c$. Assume that $l \nmid b$ , then it follows that there exists integers $q$ and $r$ , by Theorem 1.2, such that $b=lq+r$ with $0<r<l$. Hence we have $r=b-lq=b-q(bx_0+cy_0)=b(1-qx_0)+c(-qy_0)$, and thus $r$ is in the set \{$bx+cy$\}. This contradicts the fact that $l$ is the least positive integer in \{$bx+cy\}$. Similar proof for $l|c$. Now since $g=(b,c)$ we may write $b=gB$ , $c=gC$ and $l=bx_0+cy_0=g(Bx_0+Cy_0)$. Thus $g|l $ and so by Theorem 1.1 (5) we conclude that $g \leq l$. We know $g<l$ is impossible since $g$ is the greatest common divisor, so $g=l=bx_0+cy_0$.
 
 % Lecture 3
 
@@ -103,7 +103,7 @@ The greatest common denominator of $b$ and $c$ can be characterised in the follo
 \item If $d$ is any common divisor of $b$ and $c$, then $d|g$ by Theorem 1.1 (3). Moreover, there cannot be two distinct integers with property (2), because of Theorem 1.1 (4).
 \end{enumerate}
 
-Note: If $d=bx+cy$ , then $d$ is not necessary the $gcd(b,c)$. However, it does follow from such align that $(b,c)$ is a divisor of $d$. In particular , if $bx+cy=1$ for some $x,y\in\mathbb{Z}$ , then $(b,c)=1$.
+Note: If $d=bx+cy$ , then $d$ is not necessary the $gcd(b,c)$. However, it does follow from such equation that $(b,c)$ is a divisor of $d$. In particular , if $bx+cy=1$ for some $x,y\in\mathbb{Z}$ , then $(b,c)=1$.
 
 \textbf{Theorem 1.5:}\\
 Given $b_1,...,b_n\in\mathbb{Z}$ not all zero with greatest common divisor $g$, there exists integers $x_1,...,x_n$,  such that
@@ -204,7 +204,7 @@ $gcd(841,160)$
 160&=41\times3 + 37 \\
 41&=37\times 1 + 4 \\
 37&=34\times 9 + 1 \\
-4&=1\times 4 + 0 \\
+4&=1\times 4 + 0
 \end{split}
 \end{align}
 
@@ -218,7 +218,7 @@ Hence (841,160)=1 working backwards gives:
 1&=(160-3\times41)\times10 - 41 \times 9 \\
 1&=160\times10 - 41\times39 \\
 1&=160\times10 - (841-160\times5)\times39 \\
-1&=(-39)\times841 + 205\times160 \\
+1&=(-39)\times841 + 205\times160
 \end{align}
 
 Note the solution is not unique:
@@ -236,24 +236,21 @@ x_i&=x_{i-2} - q_ix_{i-1} \\
 y_i&=y_{i-2} - q_iy_{i-1} \\
 r_1&=b , r_0=c \\
 x_1&=1 , x_0=0 \\
-y_1&=0 , y_0=1 \\
+y_1&=0 , y_0=1
 \end{split}
 \end{align}
 
-
-
 We want to compute the $gcd(841,160)$ and express as a linear combination of 841 and 160.
-
 
 \textbf{Definition 1.4:}\\
 The integers $a_1,...,a_n$, all different from zero, have a \textbf{common multiple} $b$ if $a_i|b$ for $i=1,...,n$. The least of the positive common multiples is called the \textbf{least common multiple} and it is denoted by $[a_1,...,a_n]$ or $lcm(a1,...,a_n)$
 
 \textbf{Theorem 1.12:}\\
-If $b$ is any common multiple of $a_1,...,a_n$, then $[a_1,...,a_n]\ |\ b$. This is the same as saying that if $h=[a_1,...,a_n]$ then $0,\pm h,2\pm h,...$ comprise all the common multiples of $a_1,...,a_n$.
+If $b$ is any common multiple of $a_1,...,a_n$, then $[a_1,...,a_n]\ |\ b$. This is the same as saying that if $h=[a_1,...,a_n]$ then $0,\pm h,\pm 2h,...$ comprise all the common multiples of $a_1,...,a_n$.
 
 \textbf{Proof:} Theorem 1.12
 
-Let $m$ be any common multiple and divide $m$ and $h$. By Theorem 1.2 , $\exists q,r$ such that $m=qh+r$ , $ 0\leq r<h.$ We must probe that $r=0$. If $r\neq0$ we argue as follows. For each $i=1,2,...,n$ we know that $a_i|h$ and $a-i|m$, so that $a_i|r$ . Thus $r$ is a positive common multiple of $a_1,a_2,...,a_n$ contrary to the fact that h is the least of all positive common multiples.
+Let $m$ be any common multiple and divide $m$ and $h$. By Theorem 1.2 , $\exists q,r$ such that $m=qh+r$ , $ 0\leq r<h.$ We must probe that $r=0$. If $r\neq0$ we argue as follows. For each $i=1,2,...,n$ we know that $a_i|h$ and $a_i|m$, so that $a_i|r$ . Thus $r$ is a positive common multiple of $a_1,a_2,...,a_n$ contrary to the fact that h is the least of all positive common multiples.
 
 
 \textbf{Theorem 1.13:}\\
@@ -379,7 +376,7 @@ $a^{p}\quad\equiv a\ (mod\ p)$.
 \textbf{Theorem 2.8:} Euler's Generalization of Fermat's Theorem\\
 If $(a,m)=1$, then
 \begin{align}
-    a^\phi(m)\equiv 1\ (mod\ m)
+    a^\Phi(m)\equiv 1\ (mod\ m)
 \end{align}
 
 \textbf{Theorem 2.9:}\\
@@ -512,9 +509,9 @@ Let $m_1,...,m_r$ denote $r$ positive integers that are relatively prime in pair
 \end{itemize}
 
 \textbf{Theorem 2.19:}\\
-If $m_1,\ m_2>0,\ (m_1,m_2)=1$, then $\phi(m_1,m_2)=\phi(m_1)\phi(m_2)$ moreover, if $m=\Pi p^\alpha$ then
+If $m_1,\ m_2>0,\ (m_1,m_2)=1$, then $\Phi(m_1,m_2)=\Phi(m_1)\Phi(m_2)$ moreover, if $m=\Pi p^\alpha$ then
 \begin{align}
-    \phi(m)=\prod_{p|m}(p^\alpha-p^{\alpha-1})=m\prod{p|m}(1-\frac{1}{p})
+    \Phi(m)=\prod_{p|m}(p^\alpha-p^{\alpha-1})=m\prod{p|m}(1-\frac{1}{p})
 \end{align}
 
 % Lecture 14
@@ -525,28 +522,28 @@ Let $f(x)$ be a fixed polynomial with integral coefficients, and for any positiv
 \subsection{Public-key Cryptography}
 
 \textbf{Lemma 2.22:}\\
-Suppose $m\in\mathbb{Z},\ m>0,\ (a,m)=1$. If $k,\overline{k}\mathbb{Z}$ and $k,\overline{k}>0$ such that $k,\overline{k}\equiv1\ (mod\ \phi(m))$, then $a^{k\overline{k}}\equiv a\ (mod\ m)$.
+Suppose $m\in\mathbb{Z},\ m>0,\ (a,m)=1$. If $k,\overline{k}\mathbb{Z}$ and $k,\overline{k}>0$ such that $k,\overline{k}\equiv1\ (mod\ \Phi(m))$, then $a^{k\overline{k}}\equiv a\ (mod\ m)$.
 
 \textbf{Proof:} Theorem 2.22\\
-Write $k\overline{k}=1+r\phi(m)$ for some $r\in\mathbb{Z}$. Then by Euler's congruence
+Write $k\overline{k}=1+r\Phi(m)$ for some $r\in\mathbb{Z}$. Then by Euler's congruence
 \begin{align*}
-    a^{k\overline{k}} = aa^{r\phi(m)} = a(a^{\phi(m)})^r \equiv a\cdot1^r = a\ (mod\ m)
+    a^{k\overline{k}} = aa^{r\Phi(m)} = a(a^{\Phi(m)})^r \equiv a\cdot1^r = a\ (mod\ m)
 \end{align*}
 
 \begin{itemize}
-    \item If $(a,m)=1,\ k>0$, then $(a^k,m)=1$. Thus if $n=\phi(m)$ and $r_1,...,r_n$ is a system of reduced residues $(mod\ m)$, then the numbers $r_1^k,...,r_n^k$ are also relatively prime to $m$. These $k^\text{th}$ powers may not all be distinct $(mod\ m)$, as we see by considering the case $k=\phi(m)$. On the other hand, from lemma 2.22, we can deduce that these $k^\text{th}$ powers are distinct $(mod\ m)$ provided that $(k,\phi(m))=1$.
-    \item Suppose that $r_i^k\equiv r_j^k\ (mod\ m)$ and $(k,\phi(m))=1$. By theorem 2.9 we may find $\overline{k}>0$ such that $k\overline{k}\equiv 1\ (mod\ \phi{m})$ and then it follows from the lemma that
+    \item If $(a,m)=1,\ k>0$, then $(a^k,m)=1$. Thus if $n=\Phi(m)$ and $r_1,...,r_n$ is a system of reduced residues $(mod\ m)$, then the numbers $r_1^k,...,r_n^k$ are also relatively prime to $m$. These $k^\text{th}$ powers may not all be distinct $(mod\ m)$, as we see by considering the case $k=\Phi(m)$. On the other hand, from lemma 2.22, we can deduce that these $k^\text{th}$ powers are distinct $(mod\ m)$ provided that $(k,\Phi(m))=1$.
+    \item Suppose that $r_i^k\equiv r_j^k\ (mod\ m)$ and $(k,\Phi(m))=1$. By theorem 2.9 we may find $\overline{k}>0$ such that $k\overline{k}\equiv 1\ (mod\ \Phi{m})$ and then it follows from the lemma that
     \begin{align}
         r_i\equiv r_i^{k\overline{k}}=(r_i^k)^{\overline{k}}\equiv (r_j^k)^{\overline{k}}= r_j^{k\overline{k}}\equiv r_j\ (mod\ m)
     \end{align}
-    This implies that $i=j$. We will show later that the converse also holds: the numbers $r_i^k,...,r_n^k$ are distinct $(mod\ m)$ only if $(k,\phi(m))=1$. Suppose that $(k,\phi(m))=1$. Since the numbers $r_1,...,r_n^k$ are distinct $(mod\ m)$, they form a system of reduced residues $(mod\ m)$. That is the map $a\mapsto a^k$ permutates the reduced residues $(mos\ m)$ if $(k,\phi(m))=1$. The significance of the lemma is that the further map $b\mapsto b^{\overline{k}}$ is the inverse permutation.
+    This implies that $i=j$. We will show later that the converse also holds: the numbers $r_i^k,...,r_n^k$ are distinct $(mod\ m)$ only if $(k,\Phi(m))=1$. Suppose that $(k,\Phi(m))=1$. Since the numbers $r_1,...,r_n^k$ are distinct $(mod\ m)$, they form a system of reduced residues $(mod\ m)$. That is the map $a\mapsto a^k$ permutates the reduced residues $(mos\ m)$ if $(k,\Phi(m))=1$. The significance of the lemma is that the further map $b\mapsto b^{\overline{k}}$ is the inverse permutation.
     \item To apply these observations to cryptography, we take two distinct large primes, $p_1, p_2$, say each one with about 100 digits.
     \begin{itemize}
         \item So $m=p_1p_2$ has about 200 digits.
-        \item Since we know the prime factorisation of m, from theorem 2.19 we have that $\phi(m)=(p_1-1)(p_2-1)$
-        \item So $\phi(m)<m$
-        \item we choose now a big number $k$, $0<k,\phi(m)$ and check by the Euclidean algorithm that $(k,\phi(m))=1$. We try until we get such a $k$.
-        \item We make the numbers $m$ and $k$ publicly available, by keep $p_1,p_2$ and $\phi(m)$ secret.
+        \item Since we know the prime factorisation of m, from theorem 2.19 we have that $\Phi(m)=(p_1-1)(p_2-1)$
+        \item So $\Phi(m)<m$
+        \item we choose now a big number $k$, $0<k,\Phi(m)$ and check by the Euclidean algorithm that $(k,\Phi(m))=1$. We try until we get such a $k$.
+        \item We make the numbers $m$ and $k$ publicly available, by keep $p_1,p_2$ and $\Phi(m)$ secret.
         \item suppose now thatt some associate of ours wants to send us a message, say \textit{'Gauss was a genuis!'}. The associate first converts the characters to number in some standard way, say by emplying (ASCII). Then $G=071$, $a=097$,..., $!=033$. Then concatenate these codes to form a number
         \begin{align*}
             a=071097117115115126119097115126097126103101110105117115033
@@ -555,9 +552,9 @@ Write $k\overline{k}=1+r\phi(m)$ for some $r\in\mathbb{Z}$. Then by Euler's cong
         \item the associate could send the number $a$ and we could reconstruct the message. But suppose that message has some sensitive information. In that case the associate would use the number $k$ and $m$ that we have provided.
         \item Our associate quickly finds the unique number $b$, $0\leq b<m$ such that $b\equiv a^k\ (mod\ m)$ and sends this $b$ to us.
         \item We use Euclidean Algorithm to find $\overline{k}>0$ such that\\
-        $k\overline{k}\equiv 1\ (mod\ \phi(m))$ and then we find the unique $c$ such that $0\leq c<m$, $c\equiv b^{\overline{k}}\ (mod\ m)$. From lemma 2.22 we deduce that $a=c$.
+        $k\overline{k}\equiv 1\ (mod\ \Phi(m))$ and then we find the unique $c$ such that $0\leq c<m$, $c\equiv b^{\overline{k}}\ (mod\ m)$. From lemma 2.22 we deduce that $a=c$.
     \end{itemize}
-    \item In theory it might happen that $(a,m)>1$ in which case the lemma does not apply, but the chances of this is $\approx\frac{1}{p_i}\approx 10^{-100}$. Suppose that some third party gain access to the numbers $m$, $k$ and $b$, and seeks to recover the number a. In principle, all that needs to be done is to factor $m$, which yields $\phi(m)$, and hence $\overline{k}$. The problem of locating the factors of $m$ for a big number is not easy.
+    \item In theory it might happen that $(a,m)>1$ in which case the lemma does not apply, but the chances of this is $\approx\frac{1}{p_i}\approx 10^{-100}$. Suppose that some third party gain access to the numbers $m$, $k$ and $b$, and seeks to recover the number a. In principle, all that needs to be done is to factor $m$, which yields $\Phi(m)$, and hence $\overline{k}$. The problem of locating the factors of $m$ for a big number is not easy.
 \end{itemize}
 
 % Lecture 15
