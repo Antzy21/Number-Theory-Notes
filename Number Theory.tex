@@ -976,6 +976,53 @@ If $n$ is even, then choose $\beta$ such that $(n,2^{\alpha-2})=2^\beta$. The co
 
 \subsection{Quadratic Residues}
 
+\textbf{Definition 3.1:} Quadratic Residue\\
+For all $a$ such that $(a,m)=1$, $a$ is called a quadratic residue modulo $m$ if the congruence $x^2 \equiv a\ (mod\ m)$ has a solution. If it has no solution, then $a$ is called a quadratic non-residue modulo $m$.
+
+e.g.\\
+The quadratic residues modulo $5$ are $1$ and $4$. The non-residues are $2$ and $3$.
+
+\textbf{Definition 3.2:} Legendre Symbol\\
+If $p$ denotes an odd prime, then the legrende symbol $\big(\frac{a}{p}\big)$ is defined by
+
+\begin{align*}
+    \bigg(\frac{a}{p}\bigg) = 1\text{ iff a is a quadratic residue}\\
+    \bigg(\frac{a}{p}\bigg) = -1\text{ iff a is a quadratic nonresidue}\\
+    \bigg(\frac{a}{p}\bigg) = 0\text{ iff }a|p
+\end{align*}
+
+\textbf{Theorem 3.1:}\\
+Let $p$ be an odd prime. Then
+\begin{itemize}
+    \item $\big(\frac{a}{p}\big) \equiv a^{\frac{(p-1)}{2}}\ (mod\ p)$
+    \item $\big(\frac{a}{p}\big)\big(\frac{b}{p}\big) = \big(\frac{ab}{p}\big)$
+    \item $a \equiv b \ (mod\ p) \leftarrow \big(\frac{a}{p}\big)=\big(\frac{b}{p}\big)$
+    \item If $(a,p)=1 \leftarrow \big(\frac{a^2}{p}\big) = 1$, $\big(\frac{a^2b}{p}\big)=\big(\frac{b}{p}\big)$
+    \item $\big(\frac{1}{p}\big)=1$, $\big(\frac{-1}{p}\big)=(-1)^{\frac{(p-1)}{2}}$
+\end{itemize}
+
+\textbf{Remark:}\\
+$p$ odd prime, then for $a\in\mathbb{Z}$ the number of solutions of $x^2 \equiv a \ (mod\ p)$ is $1+\big(\frac{1}{p}\big)$.
+
+\textbf{Proof:}\\
+If $p|a$, then part(1) is obvious. If $(a,p)=1$ then part(1) follows from Euler's criterion (Corollary 2.38). The remaining parts are all simple consequences of part(1)
+
+\textbf{Theorem 3.2:} Lemma of Gauss\\
+Let $p$ be an odd prime and $(a,p)=1$. Consider the integers $a,2a,3a,...,\frac{p-1}{2}a$ and their least positive residues modulo $p$. If n denotes the number of these residues that exceeds $\frac{p}{2}$, then $\big(\frac{a}{p}\big)=(-1)^n$
+
+\textbf{Proof:} Theorem 3.2\\
+Let $r_1,r_2,...,r_n$ denote the number of residues that exceeds $\frac{p}{2}$ and let $s_1,s_2,...,s_k$ denote the remaining ones. The $r_i$ and $s_i$ are all distinct and none are zero. Furthermore, $n+k=\frac{p-1}{2}$. Now $0<p-r_i<\frac{p}{2}$, i.e. $1,2,...,n$ and the numbers $p-r_i$ are distinct. Also, no $p-r_i$ is an $s_j$ for if $p-r_i = s_j$ then $r_i \equiv \row a$...........
+
+\textbf{Theorem 3.3:}\\
+If $p$ is an odd prime and $(a,2p)=1$, then
+\begin{align*}
+    \bigg(\frac{a}{p}\bigg) = (-1)^t \text{ where } t=\sum^{\frac{p-1}{2}}_{j=1}\bigg[\frac{ja}{p}\bigg]\\
+    \bigg(\frac{2}{p}\bigg) =(-1)^{\frac{p^2-1}{8}}
+\end{align*}
+
+
+
+
 \subsection{Quadratic Reciprocity}
 
 % Lecture 20
@@ -983,7 +1030,7 @@ If $n$ is even, then choose $\beta$ such that $(n,2^{\alpha-2})=2^\beta$. The co
 \textbf{Theorem 3.4:}\\
 
 \begin{align}
-    \frac{p}{q}\frac{q}{p}=(-1)^{\frac{p-1}{2}\frac{q-1}{2}}
+    \bigg(\frac{p}{q}\bigg)\bigg(\frac{q}{p}\bigg)=(-1)^{\frac{p-1}{2}\frac{q-1}{2}}
 \end{align}
 
 Note: If $p$ and $q$ are distinct odd primes of the form $4k+3$, then one of the congruences $x^2\equiv p\ (mod\ q)$ or $x^2\equiv q\ (mod\ p)$ is a solutions and the other is not. However, if at least one of the primes is of the for $4k+3$, then both congruences are soluable or both are not.
